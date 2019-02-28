@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://git.oschina.net/ocelot/ExamStack -->
+<html lang="zh-CN" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="ExamStack,Java" name="Keywords">
+<meta content="Exam++新版本" name="Description">
+<title>
+ocelot/ExamStack - 码云 - 开源中国
+</title>
+<link href="http://git.oschina.net/assets/favicon-f6562a1bc6a110e32367f6e0cab4ba89.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<meta content="git.oschina.net/ocelot/ExamStack git https://git.oschina.net/ocelot/ExamStack.git" name="go-import">
+<link href="./ocelot_ExamStack - 码云 - 开源中国_files/application-f52885388f7109d9b3b4ee68ecb17657.css" media="screen" rel="stylesheet" type="text/css">
+<script src="./ocelot_ExamStack - 码云 - 开源中国_files/application-42539b05a15bb11872f88e4f5cd3db8e.js" type="text/javascript"></script>
+<script src="./ocelot_ExamStack - 码云 - 开源中国_files/jquery.timeago.zh-CN-713860ec36c1bc4d6aa16af7e6f6e2f5.js" type="text/javascript"></script>
+
+<meta content="authenticity_token" name="csrf-param">
+<meta content="Fp0mYyH7DoX1QmGKxoJSU4HrFj37DCVvWvEBHvdIc8E=" name="csrf-token">
+<script type="text/javascript">
+//<![CDATA[
+window.gon = {};gon.gravatar_url="http://www.gravatar.com/avatar/%{hash}?s=%{size}&d=mm";gon.clone_way_add="http";gon.http_clone="https://git.oschina.net/ocelot/ExamStack.git";gon.user_project="ocelot/ExamStack";gon.manage_branch="\u7ba1\u7406\u5206\u652f";gon.manage_tag="\u7ba1\u7406\u6807\u7b7e";gon.cp="\u70b9\u51fb\u590d\u5236";gon.aready_cp="\u5df2\u590d\u5236";
+//]]>
+</script>
+<!--[if lt IE 10]>
+<script>
+    window.location.href = "/incompatible.html"
+</script>
+<![endif]-->
+<script src="./ocelot_ExamStack - 码云 - 开源中国_files/app-86a46250d149a3c003e170f5ad95bb3a.js" type="text/javascript"></script><style type="text/css">.fancybox-margin{margin-right:7px;}</style></head>
+
+
+<body class="ui_basic project webkit">
+<script>
+  $(function() {
+    GitLab.GfmAutoComplete.dataSource = "/ocelot/ExamStack/autocomplete_sources"
+    GitLab.GfmAutoComplete.Emoji.assetBase = '/assets/emoji'
+    GitLab.GfmAutoComplete.setup();
+  });
+</script>
+
+<header class="ui grey menu grid page fixed noborder" id="git-header-nav">
+<div class="git-header">
+<div class="item gitosc-logo" style="padding:0;">
+<a href="http://git.oschina.net/"><img class="ui inline image" src="./ocelot_ExamStack - 码云 - 开源中国_files/logo.svg" style="height: 30px; width: 90px; padding-left: 0.5em;">
+</a></div>
+<a href="http://git.oschina.net/explore/recommend" class="item" style="font-size: 1.05rem">发现</a>
+<a href="http://git.mydoc.io/" class="item" style="font-size: 1.05rem">帮助</a>
+<a href="http://git.oschina.net/oschina/git-osc/issues" class="item" style="font-size: 1.05rem">建议</a>
+<a href="http://www.oschina.net/" class="item" style="font-size: 1.05rem" target="_blank">社区</a>
+<form accept-charset="UTF-8" action="http://git.oschina.net/search" class="item search_padding" id="projects-search-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+<div class="ui icon left mini input">
+<input autocomplete="off" id="search_top-search-input" name="search" placeholder="搜索项目..." style="border: 0px; background-color: #efefef" type="text">
+<i class="search link icon" id="projects-search"></i>
+<input id="group_id" name="group_id" type="hidden">
+<input id="project_id" name="project_id" type="hidden" value="674580">
+</div>
+</form>
+
+<script>
+  $('#projects-search').click(function(){
+     $('#projects-search-form').submit();
+  });
+  // Author: Zoker, Date: 15.02.15, Note: 搜索框焦点背景色更改
+  $('#search_top-search-input').click(function(){
+    document.getElementById("search_top-search-input").style.backgroundColor = '#eaeaea'
+  });
+  $('#search_top-search-input').blur(function(){
+    document.getElementById("search_top-search-input").style.backgroundColor = '#efefef'
+  });
+  $('#projects-search-form').submit(function(){
+    query_name = $('.code-search-input').val()
+    if(query_name != undefined && $.trim(query_name).length < 5){
+      $('#search_top-search-input').focus();
+      alert("代码搜索关键字不能少于5个");
+      return false;
+    }
+  })
+  
+  // End
+</script>
+
+
+<div class="right menu userbar" id="git-nav-user-bar">
+<div class="ui dropdown link item" tabindex="0">
+<i class="add icon"></i>
+<div class="menu" tabindex="-1">
+<a href="http://git.oschina.net/projects/new" class="item"><i class="add square icon"></i>
+新建项目
+</a><a href="http://git.oschina.net/projects/oauth_github" class="item"><i class="github icon"></i>
+Github导入
+</a><a href="http://git.oschina.net/vfudc/codes/new" class="item"><i class="code icon"></i>
+新建代码片段
+</a><a href="http://git.oschina.net/organizations/new" class="item"><i class="group icon"></i>
+新建组织
+</a></div>
+</div>
+<a href="http://git.oschina.net/profile" class="item" title="个人资料"><i class="user icon"></i>
+</a><a href="http://git.oschina.net/notifications" class="item" id="noti" title="0 未读通知 0 条私信"><i class="mail icon"></i>
+</a><a href="http://git.oschina.net/logout" class="item" data-method="delete" rel="nofollow" title="退出登录"><i class="sign out icon"></i>
+</a><a href="http://git.oschina.net/" class="profile-pic item"><img alt="9b8a917f06a0585ce5aaee723b4674b4?s=40&amp;d=mm" class="ui avatar image" id="git-nav-user" src="./ocelot_ExamStack - 码云 - 开源中国_files/9b8a917f06a0585ce5aaee723b4674b4" title="控制面板">
+</a><style>
+  .ui.circular.label{min-width:1.5em !important;min-height:0.5em !important;padding:0.2em !important;line-height:1em !important;text-align:center !important;border-radius:500rem !important}#noti{position:relative}#noti #unread-noti{font-weight:normal !important;margin-top:1.3rem !important;margin-left:-1.8rem !important;font-size:0.5rem !important}
+</style>
+
+</div>
+</div>
+</header>
+<script>
+  var $dropdown = $('#git-nav-user-bar .ui.dropdown');
+  $dropdown.dropdown({on: 'hover'});
+</script>
+
+<div class="ui grid page middle aligned" style="margin-top: 4.5rem;">
+<div class="row" id="project-ok-msg" style="padding-top: 0px;margin-bottom:6px;display:none;font-size:14px;margin:0 15px;">
+<div class="ui green message">
+<div class="p">
+私信发送成功
+</div>
+</div>
+</div>
+</div>
+
+<div class="ui grid page middle aligned">
+<a href="http://click.aliyun.com/m/4682/" target="_blank"> <img src="./ocelot_ExamStack - 码云 - 开源中国_files/ad_1463536485.jpg" width="1020" height="60"> </a>
+</div>
+<!--[if lt IE 10]>
+<script>
+  window.location.href = "/incompatible.html"
+</script>
+<![endif]-->
+
+<div class="ui grid page aligned" id="git-project-title">
+<div class="row" id="fetch-ok" style="padding-top: 0px; display: none">
+<div class="sixteen wide column">
+<div class="ui info icon floating message green">
+<i class="info icon status-icon"></i>
+<div class="content">
+<div class="header status-title">
+代码拉取完成
+</div>
+<span class="status-message">
+系统将自动刷新
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="row" style="margin-left:0px">
+<div class="ten wide column">
+<h2 class="ui header remote-message" style="font-weight: 200">
+<i class="octicon octicon-repo"></i>
+<span><a href="http://git.oschina.net/ocelot" class="author" title="Ocelot">Ocelot</a> / <a href="http://git.oschina.net/ocelot/ExamStack" class="repository" style="padding-bottom: 0px" title="ExamStack">ExamStack</a><a href="http://git.oschina.net/languages/Java" class="ui small label" id="project-language" target="_blank">Java</a>
+<style>
+  #project-language{
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+</style>
+<script>
+  var languages = $('#project-languages').html();
+  $("#project-language").popup({html: languages,variation: 'flowing',lastResort: 'bottom center'});
+</script>
+<a href="http://git.oschina.net/repositories/featured" id="recomment_icon_1" title="此项目已被推荐"><img alt="Recommend" class="ui inline mini image" id="recom_image" src="./ocelot_ExamStack - 码云 - 开源中国_files/recommend-4148c817e0ebf200acaeb9da3066e806.svg">
+</a><style>
+  #recomment_icon_0{
+    filter:Gray;
+    -webkit-filter: grayscale(100%);
+  }
+  #recom_image{
+    margin-bottom: 2px;
+  }
+</style>
+<script>
+  $(document).ready(function(){
+    $('.self_rec_class').attr('href','javascript:void(0)');
+    $('.self_rec_class').popup({
+      position : 'right center',
+      title : '审核中'
+    });
+    $('.rec_class').popup({
+      position : 'right center',
+      title : '自荐'
+    });
+  });
+</script>
+</span>
+</h2>
+</div>
+<div class="six wide column right aligned middle aligned" id="git-project-operation">
+<div class="ui mini buttons basic">
+<div class="ui button" id="project-donate" title="捐赠此项目作者">
+<i class="icon gift" style="margin-right:0;"></i>
+捐赠
+</div>
+<div class="ui modal donate-show">
+<i class="close icon"></i>
+<div class="header">
+捐赠项目 ExamStack
+<span style="font-weight: normal; font-size: 14px; margin-left: 20px">
+项目的发展离不开你的支持，请作者喝杯咖啡吧！
+</span>
+</div>
+<div class="content" style="text-align: center">
+<div id="no_donate">项目的主人没有上传捐赠二维码，快通知他让他开启吧！ <a id="project-user-message" ,="" class="set-msg-content" style="position: static; background: none; color: #00b2f3; font-size: 15px; font-weight: bold;">私信</a></div>
+</div>
+<div class="actions" id="modal-act">
+<div class="ui green button">
+完成
+</div>
+</div>
+</div>
+</div>
+<span class="basic buttons mini ui watch-container">
+<a href="http://git.oschina.net/ocelot/ExamStack/unwatch" class="ui button unwatch" data-method="post" data-remote="true" rel="nofollow">Unwatch
+</a><a href="http://git.oschina.net/ocelot/ExamStack/watch" class="ui button watch" data-method="post" data-remote="true" rel="nofollow">Watch
+</a><a href="http://git.oschina.net/ocelot/ExamStack/watchers" class="ui button social-count" title="112">112
+</a></span>
+<span class="basic buttons mini star-container ui">
+<a href="http://git.oschina.net/ocelot/ExamStack/unstar" class="ui button unstar" data-method="post" data-remote="true" rel="nofollow">Unstar
+</a><a href="http://git.oschina.net/ocelot/ExamStack/star" class="ui button star" data-method="post" data-remote="true" rel="nofollow">Star
+</a><a href="http://git.oschina.net/ocelot/ExamStack/stargazers" class="ui button social-count" title="224">224
+</a></span>
+<span class="ui buttons basic fork-container">
+<a href="http://git.oschina.net/ocelot/ExamStack#" class="ui button  fork " id="fork-top-button">Fork
+</a><a href="http://git.oschina.net/ocelot/ExamStack/members" class="ui button count" title="133">133
+</a></span>
+</div>
+</div>
+<div class="row" id="import-result-message" style="padding-top: 0px; display: none">
+<div class="sixteen wide column">
+<div class="ui icon yellow message status-color">
+<i class="info icon status-icon" style="width:60px;padding-right:12px;"></i>
+<i class="close icon"></i>
+<div class="header status-title">
+同步状态
+</div>
+<span class="status-message"></span>
+</div>
+</div>
+</div>
+<div class="row" id="fork-message" style="padding-top: 0px; display: none">
+<div class="sixteen wide column">
+<div class="ui info icon floating message status-color">
+<i class="help icon status-icon"></i>
+<div class="content">
+<div class="header status-title">
+代码Fork？
+</div>
+<span class="status-message">
+Fork 将在后台执行，是否继续？
+<div class="ui mini buttons">
+<div class="ui button positive" id="fork-modal-accept">
+确定
+</div>
+<div class="or"></div>
+<div class="ui button close" id="fork-modal-cancel">
+取消
+</div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    var glo_is_fork;
+  
+    glo_is_fork = false;
+  
+    this.title_project_path = "ExamStack";
+  
+    this.title_fork_url = "/ocelot/ExamStack/sync_fork";
+  
+    $('#fork-top-button').click(function(f) {
+      f.preventDefault();
+      if (!glo_is_fork) {
+        $('#fork-message').show();
+        $('#fork-modal-accept').click(function() {
+          var form, input1;
+  
+          glo_is_fork = true;
+          form = $("<form></form>");
+          form.attr('action', "/vfudc/fork_project/ocelot/ExamStack");
+          form.attr('method', 'post');
+          input1 = $("<input type='hidden' name='authenticity_token' />");
+          input1.attr('value', $('meta[name="csrf-token"]').attr('content'));
+          form.append(input1);
+          form.appendTo("body");
+          form.css('display', 'none');
+          form.submit();
+          return $('#fork-message').hide();
+        });
+        return $('#fork-modal-cancel').click(function() {
+          return $('#fork-message').hide();
+        });
+      }
+    });
+  
+  }).call(this);
+</script>
+<script>
+  (function() {
+    $('#project-donate').on('click', function() {
+      $('.donate-content').val('');
+      return $('.donate-show').modal('show');
+    });
+  
+  }).call(this);
+</script>
+<script>
+  is_creator = "0"
+  is_user = "1"
+  var no_donate = ""
+  var mess_button = ""
+  if(is_user=='1'){
+    var mess_button = " <a id='project-user-message', class='set-msg-content', style='position: static; background: none; color: #00b2f3; font-size: 15px; font-weight: bold;'>私信</a>"
+  }
+  if(is_creator == '1'){
+    no_donate = "您还没有上传捐赠二维码，快去开启吧！"+" <a href = '/ocelot/ExamStack/donates'> 设置 </a>"
+  }else{
+    no_donate = "项目的主人没有上传捐赠二维码，快通知他让他开启吧！"+mess_button
+  }
+  $('#no_donate').html(no_donate)
+  $('.alipay').html("支付宝")
+  $('.wechat').html("微信")
+</script>
+<style>
+  i.icon.loading {
+    height: 1em;
+    -webkit-animation: icon-loading 1.2s linear infinite;
+    animation: icon-loading 1.2s linear infinite;
+  }
+  .remote-message a:nth-child(1){
+    display: inline-block;
+    max-width: 300px;
+    white-space: nowrap;
+    vertical-align: text-bottom;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .remote-message a:nth-child(2){
+    display: inline-block;
+    max-width: 450px;
+    white-space: nowrap;
+    vertical-align: text-bottom;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  #project-donate{
+    background-color: #f0f5f9 !important;
+    color: #4183C4 !important;
+    font-weight: bold;
+  }
+  .qrcode_cs{
+    float: left;
+  }
+</style>
+
+<div class="ui grid page middle aligned" id="git-project-nav">
+<div class="ui small secondary pointing menu" id="git-project-menu" style="text-align: center;">
+<a href="http://git.oschina.net/ocelot/ExamStack" class="item active">代码
+</a><a href="http://git.oschina.net/ocelot/ExamStack/issues" class="item ">Issues
+<span class="ui mini label">
+1
+</span>
+</a><a href="http://git.oschina.net/ocelot/ExamStack/pulls" class="item ">Pull Requests
+<span class="ui mini label">0</span>
+</a><a href="http://git.oschina.net/ocelot/ExamStack/attach_files" class="item ">附件
+<span class="ui mini label">0</span>
+</a><a href="http://git.oschina.net/ocelot/ExamStack/wikis/home" class="item ">Wiki
+<span class="ui mini label">1</span>
+</a><a href="http://git.oschina.net/ocelot/ExamStack/repository/stats/master" class="item ">统计
+</a><a href="http://git.oschina.net/ocelot/ExamStack/code_analysis" class="item ">质量分析
+<i class="checkmark icon" style="color:green;font-size:10px"></i>
+</a><a href="http://git.oschina.net/ocelot/ExamStack/paas/select_platform" class="item ">代码演示
+</a></div>
+</div>
+<script>
+  $('#git-versions.dropdown').dropdown();
+  $.ajax({
+    url:"/ocelot/ExamStack/access/add_access_log",
+    type:"GET"
+  });
+</script>
+
+<div class="ui page grid aligned" id="git-project">
+<div class="row" id="git-detail-clone">
+<div class="sixteen wide column">
+<span id="hidden-desc">
+<span class="desc-text">
+Exam++新版本
+</span>
+</span>
+<div class="repo-homepage" id="hidden-url">
+</div>
+<div class="edit_des">
+</div>
+<div class="ui form" id="description-edit" style="display:none;">
+<div class="field">
+<div class="fields">
+<div class="eight wide field">
+<input id="desc-input" placeholder="描述" type="text" val="Exam++新版本">
+</div>
+<div class="four wide field">
+<input id="url-input" placeholder="项目主页(eg: https://git.oschina.net)" type="text" val="">
+</div>
+<button class="ui positive button" id="sub-desc">
+保存更改
+</button>
+<button class="ui button" id="cancel-desc">
+取消
+</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  #hidden-url{
+    display: inline;
+    margin-left: 5px;
+  }
+  .edit_des{
+    display: inline;
+    margin-left: 5px;
+    font-size: 13px;
+  }
+</style>
+
+</div>
+<style>
+  .repo-action{
+    display: inline-block !important;
+    padding: 0 1em!important;
+    text-transform: none !important;
+    line-height: 2em !important;
+    height: 26px !important;
+    outline: 0 !important;
+    cursor: pointer !important;
+  }
+  .repo-none-index{
+    display: none !important;
+  }
+  .disp-index{
+    display:inline !important;
+  }
+  .repo-action-list{
+    display:inline !important;
+  }
+</style>
+<div id="search-plane" style="margin-top:2em;margin-left:1em;margin-right:1em;display:none;min-height:300px;">
+<div style="font-size:16px;color:#666;height:30px;">
+<button class="basic button mini ui" id="back-to-list" style="display:inline;">
+<i class="arrow left icon"></i>
+返回列表
+</button>
+<a href="http://git.oschina.net/ocelot/ExamStack">ExamStack
+</a>/
+<input class="ui input" id="search-name" maxlength="40" placeholder="搜索文件" style="font-size:0.9em;color:#333;outline:none;box-shadow:none;border:0;background-color:#fafafa;height:30px;width:35%;">
+</div>
+</div>
+<div class="row" id="git-project-bread">
+<div class="ui horizontal list">
+<div class="item">
+<a href="http://git.oschina.net/ocelot/ExamStack/repository/archive/master" class="ui mini button basic" style="color: #666 !important; background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));"><i class="icon download"></i>
+ZIP
+</a></div>
+<div class="item" style="width:110px;margin-left:5px">
+<form accept-charset="UTF-8" action="http://git.oschina.net/ocelot/ExamStack/refs/switch" class="project-refs-form chzn-small" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+<select class="project-refs-select chosen chzn-done" id="ref" name="ref" style="display: none;"><optgroup label="Branch"><option value="master" selected="selected">master</option>
+<option value="open">open</option></optgroup><optgroup label="Tag"><option value="占位符看起来挺不错的">占位符看起来挺不错的</option></optgroup></select><div id="ref_chzn" class="chzn-container chzn-container-single" style="width: 100px;" title=""><a href="javascript:void(0)" class="chzn-single" tabindex="-1"><span>master</span><div><b></b></div></a><div class="chzn-drop"><div class="chzn-search"><input type="text" autocomplete="off"></div><ul class="chzn-results"><li id="ref_chzn_g_0" class="group-result">Branch(2)<a href="http://git.oschina.net/ocelot/ExamStack#" style="float:right;" onclick="javascript:window.location.href=&quot;/ocelot/ExamStack/branches/recent&quot;">管理分支</a></li><li id="ref_chzn_o_1" class="active-result result-selected group-option" style="">master</li><li id="ref_chzn_o_2" class="active-result group-option" style="">open</li><li id="ref_chzn_g_3" class="group-result">Tag(0)<a href="http://git.oschina.net/ocelot/ExamStack#" style="float:right;" onclick="javascript:window.location.href=&quot;/ocelot/ExamStack/tags&quot;">管理标签</a></li><li id="ref_chzn_o_4" class="active-result group-option" style="display: none;">占位符看起来挺不错的</li></ul></div></div>
+<input id="destination" name="destination" type="hidden" value="tree">
+<input id="path" name="path" type="hidden" value="">
+</form>
+
+<style>
+  .project-refs-form .chzn-container .chzn-drop .chzn-search input {
+    min-width: 165px;
+  }
+  .project-refs-form .chzn-container .chzn-drop {
+    min-width: 240px;
+  }
+  #ref_chzn a.chzn-single>span{
+    font-weight: bold;
+  }
+  #ref_chzn{
+    padding-left: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .date-input{
+    width:120px !important;
+  }
+  #i-user-menu{
+    position: absolute;
+    left: 702px;
+    width: 217px;
+    top: 22px;
+    z-index: 20;
+  }
+  #i-user{
+    width: 218px;
+  }
+</style>
+
+</div>
+<div class="disp-index item repo-index" style="margin-left:0px;">
+<div class="ui horizontal list repo-action-list" style="display:inline !important;">
+<a class="basic button item repo-action ui" id="search-files" style="margin-left: 4px !important;padding-left: 1em !important;color: #323A45 !important;">
+搜索文件
+</a>
+<a href="http://git.oschina.net/ocelot/ExamStack/widget" class="ui basic button item repo-action" style="color: rgba(0, 0, 0, 0.8) !important; margin-left: 5px !important;">挂件
+</a><div class="item repo-index-clone" style="float:right;margin-left:5px;">
+<div class="input-prepend project_clone_holder">
+<div class="ui mini buttons basic">
+<div class="http ui black button switch active" data-clone="https://git.oschina.net/ocelot/ExamStack.git" id="switch-url">HTTPS</div>
+<div class="ssh ui button switch" data-clone="git@git.oschina.net:ocelot/ExamStack.git">SSH</div>
+</div>
+<div class="mini ui icon input" id="mini_input">
+<input class="one_click_select" id="project_clone" name="project_clone" onclick="focus();select()" readonly="readonly" style="width: 100%; padding-top: 0.35em; padding-bottom: 0.35em; padding-left: 0.5em; padding-right: 0.5em;cursor: text;" type="text" value="https://git.oschina.net/ocelot/ExamStack.git">
+<i class="copy icon js-zeroclipboard popup" data-clipboard-text="https://git.oschina.net/ocelot/ExamStack.git" data-copied-hint="已复制!" data-copy-hint="复制到剪贴板" id="copy_url" style="cursor:pointer; padding-top: 0.47em"></i><div class="zclip" id="zclip-ZeroClipboardMovie_1" style="position: absolute; left: 163px; top: 0px; width: 34px; height: 26px; z-index: 99;"><embed id="ZeroClipboardMovie_1" src="/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="34" height="26" name="ZeroClipboardMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=34&amp;height=26" wmode="transparent"></div></div>
+</div>
+<style>
+  .project_clone_holder{
+  
+  }
+  .input-prepend>.ui.buttons>.button{
+    padding: 0.43em 0.6em;
+    font-size: 0.8rem;
+  }
+</style>
+<script>
+  var version = getFlashVersion().split(',').shift();
+  if(detectFlash() && version > 17){
+    $('input#project_clone').attr("style","width: 100%; padding-top: 0.35em; padding-bottom: 0.35em; padding-left: 0.5em; padding-right: 0.5em;cursor: text;");
+    $('#mini_input').append("<i class='copy icon js-zeroclipboard popup' data-clipboard-text= https://git.oschina.net/ocelot/ExamStack.git data-copied-hint='已复制!' data-copy-hint='复制到剪贴板' id='copy_url' style='cursor:pointer; padding-top: 0.47em'></i>")
+  }
+  function detectFlash() {
+    //navigator.mimeTypes是MIME类型，包含插件信息
+    if(navigator.mimeTypes.length>0){
+        //application/x-shockwave-flash是flash插件的名字
+        try{
+          var flashAct = navigator.mimeTypes["application/x-shockwave-flash"];
+          return flashAct != null ? flashAct.enabledPlugin!=null : false;
+        } catch (oError) {
+          return false;
+        }
+    } else if(self.ActiveXObject) {
+        try {
+            new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+            return true;
+        } catch (oError) {
+            return false;
+        }
+    }
+  }
+  function getFlashVersion(){
+    try {
+      try {
+        var axo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash.6');
+        try { axo.AllowScriptAccess = 'always'; }
+        catch(e) { return '6,0,0'; }
+      } catch(e) {}
+      return new ActiveXObject('ShockwaveFlash.ShockwaveFlash').GetVariable('$version').replace(/\D+/g, ',').match(/^,?(.+),?$/)[1];
+    } catch(e) {
+      try {
+        if(navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin){
+          return (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]).description.replace(/\D+/g, ",").match(/^,?(.+),?$/)[1];
+        }
+      } catch(e) {}
+    }
+    return '0,0,0';
+  }
+  
+  $('.http, .ssh, .svn').on('click',function(){
+    $.ajax({
+        type: "GET",
+        url: "/clone_way",
+        data: {'clone_way':this.className.split(' ')[0]},
+        success: function(data) {
+        }
+    });
+  });
+  
+  if(gon.clone_way_add == 'http'){
+    $('.http').addClass('active');
+  }else if(gon.clone_way_add == 'ssh'){
+    $('.ssh').addClass('active');
+  }else if(gon.clone_way_add == 'svn'){
+    $('.svn').addClass('active');
+  }
+</script>
+
+</div>
+</div>
+</div>
+<div class="breadcrumb_path item repo-none-index" style="margin-left: 0; padding-left: 0">
+<div class="ui breadcrumb path" id="git-bread_font">
+<a href="http://git.oschina.net/ocelot/ExamStack/tree/master" class="section repo-name" data-direction="back" style="font-weight: bold">ExamStack
+</a></div>
+<style>
+  #git-bread_font{
+    margin-bottom:0!important;
+    background-color:transparent;
+  }
+</style>
+
+</div>
+</div>
+</div>
+<style>
+  .new-release-btn{margin-left:4px !important;color:#ffffff !important;box-shadow:0px 0px 0px 1px rgba(73,127,40,0.36) inset;text-shadow:0 -1px 0 rgba(0,0,0,0.15) !important;background-color:#60b044 !important;font-weight:bold !important}
+</style>
+<script>
+  $('.popup').popup({
+    position : 'top right'
+  });
+</script>
+
+<div class="row column tree-holder" id="tree-holder">
+<div class="tree-content-holder" id="tree-content-holder">
+<div class="tree-content">
+<div class="row" id="git-project-info" style="height:40px;width:1018px;">
+<div class="four wide column content float-right" id="stats_repo">
+<a href="http://git.oschina.net/ocelot/ExamStack/releases" id="releases_count" style="font-size: 14px; padding-right: 10px;" target="_blank">0 Releases</a><a href="http://git.oschina.net/ocelot/ExamStack/branches" id="branch_count" style="font-size: 14px; padding-right: 10px;">2 Branches</a><a href="http://git.oschina.net/ocelot/ExamStack/tags" id="tag_count" style="font-size: 14px; padding-right: 10px;">0 Tags</a><a href="http://git.oschina.net/ocelot/ExamStack/commits/master" id="commit_count" style="font-size: 14px; padding-right: 10px;">27 Commits</a></div>
+<div class="twelve wide column content float-left recent-commit">
+<a href="http://git.oschina.net/liulaohan" class="commit-author-link"><img alt="" class="mini avatar circular ui image s20" src="./ocelot_ExamStack - 码云 - 开源中国_files/e39d357037fb59bb60be1b35c5267fc1" width="20"> <span class="commit-author-name">刘老憨</span></a>
+最后提交于
+<span class="timeago" title="2016-03-15 21:45">3月前</span>
+.
+<a href="http://git.oschina.net/ocelot/ExamStack/commit/e70bdee4b426a94ec1cfa9a22778b3cbd0150d3f" class="repo-index-commit-msg">Update README.md</a>
+</div>
+<div class="clearfix"></div>
+</div>
+<style>
+  .recent-commit{display:inline-block;max-width:60%;white-space:nowrap;vertical-align:text-bottom;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden}#stats_repo{font-size:0.85rem;color:#6A6A6A}#stats_repo a{color:#6c6c6c}#stats_repo a:hover{color:#4c4c4c}
+</style>
+<script>
+  $(document).ready(function() {
+    $('#branch_count').html("2 Branches");
+    $('#tag_count').html("0 Tags");
+    $('#commit_count').html("27 Commits");
+    $('#releases_count').html("0 Releases");
+  })
+</script>
+
+<div class="row" id="tree-slider">
+<div class="column ui selection list">
+<div class="grid item table_da39a3ee5e6b4b0d3255bfef95601890afd80709 tree-table ui">
+<div class="file_94c8c21d08740f5da9eaa38d1f175c592692f0d1 row tree-item" file_hex="file_94c8c21d08740f5da9eaa38d1f175c592692f0d1" style="height:31px;">
+<div class="five wide column tree-item-file-name tree-folder" style="padding: 0px; overflow: hidden;">
+<i class="icon folder"></i>
+<a href="http://git.oschina.net/ocelot/ExamStack/tree/master/common?dir=1&amp;filepath=common&amp;oid=36a04af24e357f7c82febbf2cc326d992ff180e0&amp;sha=e70bdee4b426a94ec1cfa9a22778b3cbd0150d3f" title="common"><span class="simplified-path">
+
+</span>
+common
+</a></div>
+<div class="three wide column tree_time_ago" style="display: inline-block;">
+<span class="timeago" title="2016-02-15 21:44">4月前</span>
+</div>
+<div class="eight wide column tree_author" style="display: inline-block;">
+<span class="tree_author" id="git-commit-link" style="display: inline-block;">
+<a href="http://git.oschina.net/liulaohan" class="commit-author-link"><img alt="" class="mini avatar circular ui image s20" src="./ocelot_ExamStack - 码云 - 开源中国_files/e39d357037fb59bb60be1b35c5267fc1" width="20"> <span class="commit-author-name">刘老憨</span></a>
+<a href="http://git.oschina.net/ocelot/ExamStack/commit/05d20b4eb0e3c3d3059e5afaf0b422e006777aa4" class="tree-commit-link" title="Update FileUploadUtil.java">Update FileUploadUtil.java</a>
+</span>
+</div>
+</div>
+<div class="file-action file-action-file_94c8c21d08740f5da9eaa38d1f175c592692f0d1 popup ui" style="z-index:1; margin:0em; padding: 0.52em;">
+<div class="ui buttons">
+<button class="ui mini negative button file-action-destory">删除</button>
+<button class="ui mini positive button file-action-rename" file_hex="file_94c8c21d08740f5da9eaa38d1f175c592692f0d1">重命名</button>
+</div>
+</div>
+<div class="rename-file_94c8c21d08740f5da9eaa38d1f175c592692f0d1 row tree-item tree-item-rename" file_hex="file_94c8c21d08740f5da9eaa38d1f175c592692f0d1" style="height:31px;display:none">
+<div class="ui form" path="tree/master/common" style="font-size:12px;margin:0px">
+<div class="inline fields">
+<div class="thirteen wide column field">
+<input name="new_filename" style="padding: 5px;width:100%" type="text" value="common">
+</div>
+<div class="one wide column field right aligned">
+<button class="ui mini positive button popup-save" type="submit">保存</button>
+</div>
+<div class="one wide column field">
+<button class="ui mini red button popup-close">取消</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .eight.wide.column.tree_author{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
+<div class="file_982d46d22d9597c30d79d368dc9197f5f1fe5956 row tree-item" file_hex="file_982d46d22d9597c30d79d368dc9197f5f1fe5956" style="height:31px;">
+<div class="five wide column tree-item-file-name tree-folder" style="padding:0">
+<i class="icon folder"></i>
+<a href="http://git.oschina.net/ocelot/ExamStack/tree/master/management?dir=1&amp;filepath=management&amp;oid=f4ead9935e55e8deadf0c83e1840e04b7ba272b3&amp;sha=e70bdee4b426a94ec1cfa9a22778b3cbd0150d3f" title="management"><span class="simplified-path">
+
+</span>
+management
+</a></div>
+<div class="three wide column tree_time_ago">
+<span class="timeago" title="2016-03-15 21:39">3月前</span>
+</div>
+<div class="eight wide column tree_author">
+<span class="tree_author" id="git-commit-link">
+<a href="http://git.oschina.net/liulaohan" class="commit-author-link"><img alt="" class="mini avatar circular ui image s20" src="./ocelot_ExamStack - 码云 - 开源中国_files/e39d357037fb59bb60be1b35c5267fc1" width="20"> <span class="commit-author-name">刘老憨</span></a>
+<a href="http://git.oschina.net/ocelot/ExamStack/commit/d075798b407287824912cbd610181fc21138b6e0" class="tree-commit-link" title="Update user-exam-list.jsp">Update user-exam-list.jsp</a>
+</span>
+</div>
+</div>
+<div class="file-action file-action-file_982d46d22d9597c30d79d368dc9197f5f1fe5956 popup ui" style="z-index:1; margin:0em; padding: 0.52em;">
+<div class="ui buttons">
+<button class="ui mini negative button file-action-destory">删除</button>
+<button class="ui mini positive button file-action-rename" file_hex="file_982d46d22d9597c30d79d368dc9197f5f1fe5956">重命名</button>
+</div>
+</div>
+<div class="rename-file_982d46d22d9597c30d79d368dc9197f5f1fe5956 row tree-item tree-item-rename" file_hex="file_982d46d22d9597c30d79d368dc9197f5f1fe5956" style="height:31px;display:none">
+<div class="ui form" path="tree/master/management" style="font-size:12px;margin:0px">
+<div class="inline fields">
+<div class="thirteen wide column field">
+<input name="new_filename" style="padding: 5px;width:100%" type="text" value="management">
+</div>
+<div class="one wide column field right aligned">
+<button class="ui mini positive button popup-save" type="submit">保存</button>
+</div>
+<div class="one wide column field">
+<button class="ui mini red button popup-close">取消</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .eight.wide.column.tree_author{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
+<div class="file_23f3fd77a464cbe250150f60d785f08978d07e40 row tree-item" file_hex="file_23f3fd77a464cbe250150f60d785f08978d07e40" style="height:31px;">
+<div class="five wide column tree-item-file-name tree-folder" style="padding: 0px; overflow: hidden;">
+<i class="icon folder"></i>
+<a href="http://git.oschina.net/ocelot/ExamStack/tree/master/portal?dir=1&amp;filepath=portal&amp;oid=3b9a97444766a5a8e2296388f3bc10eaed4599cf&amp;sha=e70bdee4b426a94ec1cfa9a22778b3cbd0150d3f" title="portal"><span class="simplified-path">
+
+</span>
+portal
+</a></div>
+<div class="three wide column tree_time_ago" style="display: inline-block;">
+<span class="timeago" title="2015-12-13 22:21">6月前</span>
+</div>
+<div class="eight wide column tree_author" style="display: inline-block;">
+<span class="tree_author" id="git-commit-link" style="display: inline-block;">
+<a class="commit-author-link" href="mailto:Ocelot@SKY-20150516HYE"><img alt="" class="mini avatar circular ui image s20" src="./ocelot_ExamStack - 码云 - 开源中国_files/8b67639d504ef7fe569639938f1b96a9" width="20"> <span class="commit-author-name">Ocelot</span></a>
+<a href="http://git.oschina.net/ocelot/ExamStack/commit/f9f87a31f692298f4a436795d6de4fd2dc782164" class="tree-commit-link" title="first commit">first commit</a>
+</span>
+</div>
+</div>
+<div class="file-action file-action-file_23f3fd77a464cbe250150f60d785f08978d07e40 popup ui" style="z-index:1; margin:0em; padding: 0.52em;">
+<div class="ui buttons">
+<button class="ui mini negative button file-action-destory">删除</button>
+<button class="ui mini positive button file-action-rename" file_hex="file_23f3fd77a464cbe250150f60d785f08978d07e40">重命名</button>
+</div>
+</div>
+<div class="rename-file_23f3fd77a464cbe250150f60d785f08978d07e40 row tree-item tree-item-rename" file_hex="file_23f3fd77a464cbe250150f60d785f08978d07e40" style="height:31px;display:none">
+<div class="ui form" path="tree/master/portal" style="font-size:12px;margin:0px">
+<div class="inline fields">
+<div class="thirteen wide column field">
+<input name="new_filename" style="padding: 5px;width:100%" type="text" value="portal">
+</div>
+<div class="one wide column field right aligned">
+<button class="ui mini positive button popup-save" type="submit">保存</button>
+</div>
+<div class="one wide column field">
+<button class="ui mini red button popup-close">取消</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .eight.wide.column.tree_author{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
+<div class="file_5f5ddd1fe195bdb66d0804e5ee635f1dbd214766 row tree-item" file_hex="file_5f5ddd1fe195bdb66d0804e5ee635f1dbd214766" style="height:31px;">
+<div class="five wide column tree-item-file-name tree-folder" style="padding:0">
+<i class="icon folder"></i>
+<a href="http://git.oschina.net/ocelot/ExamStack/tree/master/scoreMarker?dir=1&amp;filepath=scoreMarker&amp;oid=1c1e37b4bc8083f029c2af0384efd92a4da2f076&amp;sha=e70bdee4b426a94ec1cfa9a22778b3cbd0150d3f" title="scoreMarker"><span class="simplified-path">
+
+</span>
+scoreMarker
+</a></div>
+<div class="three wide column tree_time_ago">
+<span class="timeago" title="2015-12-13 22:21">6月前</span>
+</div>
+<div class="eight wide column tree_author">
+<span class="tree_author" id="git-commit-link">
+<a class="commit-author-link" href="mailto:Ocelot@SKY-20150516HYE"><img alt="" class="mini avatar circular ui image s20" src="./ocelot_ExamStack - 码云 - 开源中国_files/8b67639d504ef7fe569639938f1b96a9" width="20"> <span class="commit-author-name">Ocelot</span></a>
+<a href="http://git.oschina.net/ocelot/ExamStack/commit/f9f87a31f692298f4a436795d6de4fd2dc782164" class="tree-commit-link" title="first commit">first commit</a>
+</span>
+</div>
+</div>
+<div class="file-action file-action-file_5f5ddd1fe195bdb66d0804e5ee635f1dbd214766 popup ui" style="z-index:1; margin:0em; padding: 0.52em;">
+<div class="ui buttons">
+<button class="ui mini negative button file-action-destory">删除</button>
+<button class="ui mini positive button file-action-rename" file_hex="file_5f5ddd1fe195bdb66d0804e5ee635f1dbd214766">重命名</button>
+</div>
+</div>
+<div class="rename-file_5f5ddd1fe195bdb66d0804e5ee635f1dbd214766 row tree-item tree-item-rename" file_hex="file_5f5ddd1fe195bdb66d0804e5ee635f1dbd214766" style="height:31px;display:none">
+<div class="ui form" path="tree/master/scoreMarker" style="font-size:12px;margin:0px">
+<div class="inline fields">
+<div class="thirteen wide column field">
+<input name="new_filename" style="padding: 5px;width:100%" type="text" value="scoreMarker">
+</div>
+<div class="one wide column field right aligned">
+<button class="ui mini positive button popup-save" type="submit">保存</button>
+</div>
+<div class="one wide column field">
+<button class="ui mini red button popup-close">取消</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .eight.wide.column.tree_author{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
+<div class="file_a5cc2925ca8258af241be7e5b0381edf30266302 row tree-item" file_hex="file_a5cc2925ca8258af241be7e5b0381edf30266302" style="height:31px; ">
+<div class="five wide column tree-item-file-name tree-file" style="padding: 0px; overflow: hidden;">
+<i class="icon file text outline"></i>
+<a href="http://git.oschina.net/ocelot/ExamStack/blob/master/.gitignore?dir=0&amp;filepath=.gitignore&amp;oid=ea98b0849587d6bd5b13c3b619c3efb5e667c135&amp;sha=e70bdee4b426a94ec1cfa9a22778b3cbd0150d3f" title=".gitignore">.gitignore</a>
+</div>
+<div class="three wide column tree_time_ago" style="display: inline-block;">
+<span class="timeago" title="2015-12-13 22:21">6月前</span>
+</div>
+<div class="eight wide column tree_author" style="display: inline-block;">
+<span class="tree_author" id="git-commit-link" style="display: inline-block;">
+<a class="commit-author-link" href="mailto:Ocelot@SKY-20150516HYE"><img alt="" class="mini avatar circular ui image s20" src="./ocelot_ExamStack - 码云 - 开源中国_files/8b67639d504ef7fe569639938f1b96a9" width="20"> <span class="commit-author-name">Ocelot</span></a>
+<a href="http://git.oschina.net/ocelot/ExamStack/commit/f9f87a31f692298f4a436795d6de4fd2dc782164" class="tree-commit-link" title="first commit">first commit</a>
+</span>
+</div>
+</div>
+<div class="file-action file-action-file_a5cc2925ca8258af241be7e5b0381edf30266302 popup ui" style="z-index: 1;">
+<div class="ui buttons">
+<button class="ui mini negative button file-action-destory">删除</button>
+<button class="ui mini positive button file-action-rename" file_hex="file_a5cc2925ca8258af241be7e5b0381edf30266302">重命名</button>
+</div>
+</div>
+<div class="rename-file_a5cc2925ca8258af241be7e5b0381edf30266302 row tree-item tree-item-rename" file_hex="file_a5cc2925ca8258af241be7e5b0381edf30266302" style="height:31px;;display:none">
+<div class="ui form" path="blob/master/.gitignore" style="font-size:12px;margin:0px">
+<div class="inline fields">
+<div class="thirteen wide column field">
+<input name="new_filename" style="padding: 5px;width:100%" type="text" value=".gitignore">
+</div>
+<div class="one wide column field right aligned">
+<button class="ui mini positive button popup-save" type="submit">保存</button>
+</div>
+<div class="one wide column field">
+<button class="ui mini red button popup-close">取消</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .eight.wide.column.tree_author{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
+<div class="file_0398ccd0f49298b10a3d76a47800d2ebecd49859 row tree-item" file_hex="file_0398ccd0f49298b10a3d76a47800d2ebecd49859" style="height:31px; ">
+<div class="five wide column tree-item-file-name tree-file" style="padding:0">
+<i class="icon file text outline"></i>
+<a href="http://git.oschina.net/ocelot/ExamStack/blob/master/LICENSE?dir=0&amp;filepath=LICENSE&amp;oid=55df8568ef4d02b5e01166f4bdd664bd1d3865f6&amp;sha=e70bdee4b426a94ec1cfa9a22778b3cbd0150d3f" title="LICENSE">LICENSE</a>
+</div>
+<div class="three wide column tree_time_ago">
+<span class="timeago" title="2015-12-11 21:55">6月前</span>
+</div>
+<div class="eight wide column tree_author">
+<span class="tree_author" id="git-commit-link">
+<a href="http://git.oschina.net/ocelot" class="commit-author-link"><img alt="" class="mini avatar circular ui image s20" src="./ocelot_ExamStack - 码云 - 开源中国_files/4939_ocelot.jpg" width="20"> <span class="commit-author-name">Ocelot</span></a>
+<a href="http://git.oschina.net/ocelot/ExamStack/commit/97173147e39e1101aec7ab54bac1406b9338ead9" class="tree-commit-link" title="Initial commit">Initial commit</a>
+</span>
+</div>
+</div>
+<div class="file-action file-action-file_0398ccd0f49298b10a3d76a47800d2ebecd49859 popup ui" style="z-index: 1;">
+<div class="ui buttons">
+<button class="ui mini negative button file-action-destory">删除</button>
+<button class="ui mini positive button file-action-rename" file_hex="file_0398ccd0f49298b10a3d76a47800d2ebecd49859">重命名</button>
+</div>
+</div>
+<div class="rename-file_0398ccd0f49298b10a3d76a47800d2ebecd49859 row tree-item tree-item-rename" file_hex="file_0398ccd0f49298b10a3d76a47800d2ebecd49859" style="height:31px;;display:none">
+<div class="ui form" path="blob/master/LICENSE" style="font-size:12px;margin:0px">
+<div class="inline fields">
+<div class="thirteen wide column field">
+<input name="new_filename" style="padding: 5px;width:100%" type="text" value="LICENSE">
+</div>
+<div class="one wide column field right aligned">
+<button class="ui mini positive button popup-save" type="submit">保存</button>
+</div>
+<div class="one wide column field">
+<button class="ui mini red button popup-close">取消</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .eight.wide.column.tree_author{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
+<div class="file_8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d row tree-item" file_hex="file_8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" style="height:31px; ">
+<div class="five wide column tree-item-file-name tree-file" style="padding:0">
+<i class="icon file text outline"></i>
+<a href="http://git.oschina.net/ocelot/ExamStack/blob/master/README.md?dir=0&amp;filepath=README.md&amp;oid=640487ad5c89bc567b1cec124b2267c17aa4d147&amp;sha=e70bdee4b426a94ec1cfa9a22778b3cbd0150d3f" title="README.md">README.md</a>
+</div>
+<div class="three wide column tree_time_ago">
+<span class="timeago" title="2016-03-15 21:45">3月前</span>
+</div>
+<div class="eight wide column tree_author">
+<span class="tree_author" id="git-commit-link">
+<a href="http://git.oschina.net/liulaohan" class="commit-author-link"><img alt="" class="mini avatar circular ui image s20" src="./ocelot_ExamStack - 码云 - 开源中国_files/e39d357037fb59bb60be1b35c5267fc1" width="20"> <span class="commit-author-name">刘老憨</span></a>
+<a href="http://git.oschina.net/ocelot/ExamStack/commit/e70bdee4b426a94ec1cfa9a22778b3cbd0150d3f" class="tree-commit-link" title="Update README.md">Update README.md</a>
+</span>
+</div>
+</div>
+<div class="file-action file-action-file_8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d popup ui" style="z-index: 1;">
+<div class="ui buttons">
+<button class="ui mini negative button file-action-destory">删除</button>
+<button class="ui mini positive button file-action-rename" file_hex="file_8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d">重命名</button>
+</div>
+</div>
+<div class="rename-file_8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d row tree-item tree-item-rename" file_hex="file_8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" style="height:31px;;display:none">
+<div class="ui form" path="blob/master/README.md" style="font-size:12px;margin:0px">
+<div class="inline fields">
+<div class="thirteen wide column field">
+<input name="new_filename" style="padding: 5px;width:100%" type="text" value="README.md">
+</div>
+<div class="one wide column field right aligned">
+<button class="ui mini positive button popup-save" type="submit">保存</button>
+</div>
+<div class="one wide column field">
+<button class="ui mini red button popup-close">取消</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .eight.wide.column.tree_author{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
+<div class="file_a8caf156cc0b424374e3dd3224827c88526c969d row tree-item" file_hex="file_a8caf156cc0b424374e3dd3224827c88526c969d" style="height:31px; ">
+<div class="five wide column tree-item-file-name tree-file" style="padding: 0px; overflow: hidden;">
+<i class="icon file text outline"></i>
+<a href="http://git.oschina.net/ocelot/ExamStack/blob/master/examstack.sql?dir=0&amp;filepath=examstack.sql&amp;oid=c2e58d1c81fb6cf878e85bc238ba93f7cd8e5ffe&amp;sha=e70bdee4b426a94ec1cfa9a22778b3cbd0150d3f" title="examstack.sql">examstack.sql</a>
+</div>
+<div class="three wide column tree_time_ago" style="display: inline-block;">
+<span class="timeago" title="2015-12-18 09:31">6月前</span>
+</div>
+<div class="eight wide column tree_author" style="display: inline-block;">
+<span class="tree_author" id="git-commit-link" style="display: inline-block;">
+<a class="commit-author-link" href="mailto:scar@133.12.9.51"><img alt="" class="mini avatar circular ui image s20" src="./ocelot_ExamStack - 码云 - 开源中国_files/78c5ae2c02fa714f57a85b7cba172ce8" width="20"> <span class="commit-author-name">scar</span></a>
+<a href="http://git.oschina.net/ocelot/ExamStack/commit/7876c75f8ad237d17d060e73f8144fbce06e766d" class="tree-commit-link" title="更新数据库文件">更新数据库文件</a>
+</span>
+</div>
+</div>
+<div class="file-action file-action-file_a8caf156cc0b424374e3dd3224827c88526c969d popup ui" style="z-index: 1;">
+<div class="ui buttons">
+<button class="ui mini negative button file-action-destory">删除</button>
+<button class="ui mini positive button file-action-rename" file_hex="file_a8caf156cc0b424374e3dd3224827c88526c969d">重命名</button>
+</div>
+</div>
+<div class="rename-file_a8caf156cc0b424374e3dd3224827c88526c969d row tree-item tree-item-rename" file_hex="file_a8caf156cc0b424374e3dd3224827c88526c969d" style="height:31px;;display:none">
+<div class="ui form" path="blob/master/examstack.sql" style="font-size:12px;margin:0px">
+<div class="inline fields">
+<div class="thirteen wide column field">
+<input name="new_filename" style="padding: 5px;width:100%" type="text" value="examstack.sql">
+</div>
+<div class="one wide column field right aligned">
+<button class="ui mini positive button popup-save" type="submit">保存</button>
+</div>
+<div class="one wide column field">
+<button class="ui mini red button popup-close">取消</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .eight.wide.column.tree_author{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
+<div class="file_442292b8a7efeabbe4cc176709b833b1792140ec row tree-item" file_hex="file_442292b8a7efeabbe4cc176709b833b1792140ec" style="height:31px; ">
+<div class="five wide column tree-item-file-name tree-file" style="padding:0">
+<i class="icon file text outline"></i>
+<a href="http://git.oschina.net/ocelot/ExamStack/blob/master/pom.xml?dir=0&amp;filepath=pom.xml&amp;oid=c199180e61a50f62464c86bd2c450cbb191fadbf&amp;sha=e70bdee4b426a94ec1cfa9a22778b3cbd0150d3f" title="pom.xml">pom.xml</a>
+</div>
+<div class="three wide column tree_time_ago">
+<span class="timeago" title="2015-12-13 22:21">6月前</span>
+</div>
+<div class="eight wide column tree_author">
+<span class="tree_author" id="git-commit-link">
+<a class="commit-author-link" href="mailto:Ocelot@SKY-20150516HYE"><img alt="" class="mini avatar circular ui image s20" src="./ocelot_ExamStack - 码云 - 开源中国_files/8b67639d504ef7fe569639938f1b96a9" width="20"> <span class="commit-author-name">Ocelot</span></a>
+<a href="http://git.oschina.net/ocelot/ExamStack/commit/f9f87a31f692298f4a436795d6de4fd2dc782164" class="tree-commit-link" title="first commit">first commit</a>
+</span>
+</div>
+</div>
+<div class="file-action file-action-file_442292b8a7efeabbe4cc176709b833b1792140ec popup ui" style="z-index: 1;">
+<div class="ui buttons">
+<button class="ui mini negative button file-action-destory">删除</button>
+<button class="ui mini positive button file-action-rename" file_hex="file_442292b8a7efeabbe4cc176709b833b1792140ec">重命名</button>
+</div>
+</div>
+<div class="rename-file_442292b8a7efeabbe4cc176709b833b1792140ec row tree-item tree-item-rename" file_hex="file_442292b8a7efeabbe4cc176709b833b1792140ec" style="height:31px;;display:none">
+<div class="ui form" path="blob/master/pom.xml" style="font-size:12px;margin:0px">
+<div class="inline fields">
+<div class="thirteen wide column field">
+<input name="new_filename" style="padding: 5px;width:100%" type="text" value="pom.xml">
+</div>
+<div class="one wide column field right aligned">
+<button class="ui mini positive button popup-save" type="submit">保存</button>
+</div>
+<div class="one wide column field">
+<button class="ui mini red button popup-close">取消</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .eight.wide.column.tree_author{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="tree_progress ui">
+<div class="ui active inverted dimmer">
+<div class="ui small text loader">Loading...</div>
+</div>
+</div>
+</div>
+<div id="git-readme">
+<div class="file_holder">
+<div class="file_title">
+<i class="octicon octicon-book"></i>
+<span class="file_name">
+README.md
+<small>3.79 KB</small>
+</span>
+</div>
+<div class="file_content markdown-body">
+<h1><a class="anchor" id="examstack-v2-0" href="http://git.oschina.net/ocelot/ExamStack#examstack-v2-0"></a>ExamStack V2.0</h1>
+<hr>
+<h2><a class="anchor" id="1-概述" href="http://git.oschina.net/ocelot/ExamStack#1-概述"></a>1 概述</h2>
+<p>关键词：免费 开源 在线 网络考试系统 考试系统 培训系统 </p>
+<h3><a class="anchor" id="1-1-简介" href="http://git.oschina.net/ocelot/ExamStack#1-1-简介"></a>1.1 简介</h3>
+<p><a href="http://www.examstack.com/">官方网站</a> <a href="http://shang.qq.com/wpa/qunwpa?idkey=b365bd36df1bd42ffcf8ab7b91fb93f21841548bcda6ec721de276bae9f72e35">讨论组</a></p>
+
+<p>在<a href="http://www.examstack.com/">Exam++</a>考试系统第一版的基础上，我们对<a href="http://www.examstack.com/">ExamStack V2.0</a>进行了大量代码重构，同时也对数据模型做了部分调整。为了减小学员考试交卷时大量并发带来的系统风险，我们尝试采用成熟的消息队列框架RabbitMQ来解决这一问题，因此我们的数据库以及系统的架构同第一版相比，发生了不小的变化。</p>
+
+<p><img alt="ExamStack" src="./ocelot_ExamStack - 码云 - 开源中国_files/overview.png"></p>
+<h3><a class="anchor" id="1-2-部署要点" href="http://git.oschina.net/ocelot/ExamStack#1-2-部署要点"></a>1.2 部署要点</h3>
+<ol class="task-list">
+<li><p><code>Management.war</code>和<code>Portal.war</code>需要部署在<code>同一个目录</code>下。</p></li>
+<li><p>ExamStack V2.0增加了<code>培训功能</code>，因为需要保存培训材料，所以请留出足够的磁盘空间（以实际需要为准）。</p></li>
+<li><p>要保证RabbitMQ服务状态为<code>运行状态</code>。</p></li>
+<li><p>要保证ScoreMarker状态为<code>运行状态</code>，同时ScoreMarker调用服务地址要配置正确。</p></li>
+</ol>
+<h2><a class="anchor" id="2-应用服务器安装配置" href="http://git.oschina.net/ocelot/ExamStack#2-应用服务器安装配置"></a>2 应用服务器安装配置</h2><h3><a class="anchor" id="2-1-服务器安装部署" href="http://git.oschina.net/ocelot/ExamStack#2-1-服务器安装部署"></a>2.1 服务器安装部署</h3><h4><a class="anchor" id="2-1-1-服务器配置" href="http://git.oschina.net/ocelot/ExamStack#2-1-1-服务器配置"></a>2.1.1 服务器配置</h4>
+<ul class="task-list">
+<li><p>操作系统：Linux、Windows</p></li>
+<li><p>内存：最低2G，推荐8G</p></li>
+</ul>
+<h4><a class="anchor" id="2-1-2-java运行环境" href="http://git.oschina.net/ocelot/ExamStack#2-1-2-java运行环境"></a>2.1.2 java运行环境</h4>
+<ul class="task-list">
+<li>Java 8</li>
+</ul>
+<h4><a class="anchor" id="2-1-3-服务器" href="http://git.oschina.net/ocelot/ExamStack#2-1-3-服务器"></a>2.1.3 服务器</h4>
+<ul class="task-list">
+<li><p>Tomcat 8</p></li>
+<li><p>RabbitMQ</p></li>
+<li><p>MySql 5.0以上</p></li>
+</ul>
+<h3><a class="anchor" id="2-2-应用部署" href="http://git.oschina.net/ocelot/ExamStack#2-2-应用部署"></a>2.2 应用部署</h3><h4><a class="anchor" id="2-2-1-数据库" href="http://git.oschina.net/ocelot/ExamStack#2-2-1-数据库"></a>2.2.1 数据库</h4>
+<ol class="task-list">
+<li><p>在MySql中新建一个数据库<code>examstack</code>，字符集使用<code>utf8 -- UTF-8 Unicode</code></p></li>
+<li><p>使用我们提供的<code>examstack.sql</code>还原<code>examstack</code></p></li>
+<li><p>设置好对应的访问权限</p></li>
+</ol>
+<h4><a class="anchor" id="2-2-2-rabbitmq" href="http://git.oschina.net/ocelot/ExamStack#2-2-2-rabbitmq"></a>2.2.2 RabbitMQ</h4>
+<ol class="task-list">
+<li><p>安装最新版本的RabbitMQ，具体安装方法，在网络上可以找到很多。</p></li>
+<li><p>配置</p></li>
+</ol>
+<h4><a class="anchor" id="2-2-3-应用" href="http://git.oschina.net/ocelot/ExamStack#2-2-3-应用"></a>2.2.3 应用</h4>
+<ol class="task-list">
+<li><p>将<code>Management.war</code>和<code>Portal.war</code>放到Tomcat应用程序目录（<code>webapps</code>）下。</p></li>
+<li><p>启动Tomcat，webapps目录下会生成两个文件夹（<code>Management</code>和<code>Portal</code>）。</p></li>
+<li>
+<p>分别进入到<code>Management/WEB-INF/Spring</code>和<code>Portal/WEB-INF/Spring</code>下修改<code>root-context.xml</code>文件,将数据库地址、用户名和密码修改成正确的内容。修改完成后重启tomcat服务器。</p>
+
+<p><em>需要修改的内容如下:</em></p>
+<div class="white"><div class="highlight"><pre>&lt;property name="jdbcUrl" value="jdbc:mysql:/*.*.*.*:3306/examstack?useUnicode=true&amp;amp;characterEncoding=UTF-8" /&gt;
+&lt;property name="user" value="root" /&gt;
+&lt;property name="password" value="***" /&gt;
+</pre></div></div>
+</li>
+<li>
+<p>访问<code>http://localhost:8080/Management</code>和<code>http://localhost:8080/Portal</code>可以进入到管理后台页面和学员页面，并可以正常登陆，则应用配置成功。</p>
+
+<p><strong>注意</strong>：*在完成这一步后学员考试交卷无法完成,需要部署<code>ScoreMarker</code>。*</p>
+</li>
+<li>
+<p>部署ScoreMarker</p>
+
+<p>Linux下
+解压scoreMarker到/opt/目录。
+确认config/scoremarker.properties文件配置正确。
+拷贝scoremarker 执行脚本到init.d目录下并检查脚本中的配置。</p>
+
+<p>Windows下
+解压scoreMarker到任意目录。
+确认config/scoremarker.properties文件配置正确。
+修改installService.bat中APP_HOME为scoreMarker目录。
+运行installService.bat后启动服务ScoreMarkerService服务。</p>
+</li>
+</ol>
+<h2><a class="anchor" id="3-更新说明" href="http://git.oschina.net/ocelot/ExamStack#3-更新说明"></a>3 更新说明</h2>
+<p><strong>系统架构</strong></p>
+
+<ol class="task-list">
+<li>管理后台现在独立成一个新项目，不再和第一版一样和前台合在一起。</li>
+<li>引入RabbitMq，用于接受用户提交的答题卡，通过ScoreMarker从消息队列获取答题卡并交卷，减小大量用户提交导致的服务器故障几率。</li>
+<li>试题内容存储格式由xml改为json</li>
+<li>增加教师角色，现在教师用户可以正确地使用自己的权限管理学员、试题、试卷、考试以及培训。</li>
+<li>优化系统界面，新的界面看起来更加清爽、专业。</li>
+<li>新增了DashBoard，管理界面看起来会更专业。</li>
+<li>练习历史现在专门用一张表记录，使开发相关统计变得更容易。</li>
+</ol>
+
+<p><strong>考试和练习</strong></p>
+
+<ol class="task-list">
+<li>考试现在分为正式考试和模拟考试两种，正式考试需要教师或管理员审核，而模拟考试不需要审核。正式考试又分为公有和私有两种类型，公有考试是可以申请的考试，私有考试则需要教师或管理员指定学员（这里由管理员指定也被我们认为是审核的一种方式）。</li>
+<li>新增审核功能，现在教师创建的试卷、考试都需要超级管理员审核。超级管理员自己创建的不需要审核。同时，超级管理员和教师也可以审核学员的考试申请。</li>
+<li>新增人工阅卷功能。包含主观题的考试试卷，教师或超级管理员通过人工阅卷后可以确定最终分数。全部是客观题的试卷不需要阅卷。</li>
+<li>新增考试成绩统计功能，可以查看特定考试下学员的分数，同时可以对分数进行排序。</li>
+<li>新增学习记录查询功能，教师和管理员现在可以方便地查看学员的练习记录、培训记录和考试记录。</li>
+<li>新增快速考试模式，通过输入准考证号即可直接进入到对应的考试页面。</li>
+<li>新增继续考试功能，现在学员在考试过程中中断考试后，继续进入考试后，学员的答题记录会恢复到中断前的状态。</li>
+</ol>
+
+<p><strong>题库管理</strong></p>
+
+<ol class="task-list">
+<li>优化试题修改功能，现在可以正确地修改试题的基本信息。</li>
+</ol>
+
+<p><strong>其他</strong></p>
+
+<ol class="task-list">
+<li>新增培训功能，教师或超级管理员可以发布培训资料（视频和pdf文档）。学员可以选择自己需要参加的培训进行学习，培训分为视频和pdf格式的文档两种。</li>
+<li>新增虚拟班级功能，教师或管理员现在可以通过虚拟班组很方便地管理学员。</li>
+</ol>
+<h2><a class="anchor" id="4-系统问题处理" href="http://git.oschina.net/ocelot/ExamStack#4-系统问题处理"></a>4 系统问题处理</h2>
+<ol class="task-list">
+<li>
+<p><strong>不能获得数据库连接</strong></p>
+
+<blockquote>
+<p>Cause:org.springframework.jdbc.CannotGetJdbcConnectionException:Could not get JDBC Connection;nested exception is java.sql.SQLException:Access denied for user 'root'@'localhost'</p>
+</blockquote>
+
+<p>请检查数据库连接字符串是否正确，同时检查数据库名、用户名和密码是否设置正确。</p>
+</li>
+<li>
+<p><strong>交卷失败</strong></p>
+
+<blockquote>
+<p><code>RabbitMQ</code>没有启动会导致应用程序连接<code>RabbitMQ</code>失败</p>
+</blockquote>
+
+<p>请检查<code>RabbitMQ</code>服务是否启动。</p>
+</li>
+<li>
+<p><strong>学员交卷后，管理界面学员对应的状态没有改变</strong></p>
+
+<blockquote>
+<p>交卷成功后，学员考试状态会修改成<code>已交卷</code>或者<code>已阅卷</code>，如果在提示“交卷成功”后没有发生任何变化，证明ScoreMarker没有正常启动或者ScoreMarker调用接口失败。</p>
+</blockquote>
+
+<p>请检查ScoreMarker是否启动。同时请保证ScoreMarker能调用到Management提供的接口，这一点在ScoreMarker部署中已经说明。</p>
+</li>
+<li>
+<p><strong>RabbitMQ、MySql、ScoreMarker无法启动或经常被Kill掉</strong></p>
+
+<blockquote>
+<p>我们在测试过程中发现，内存不足的情况下（我们使用的是1G内存），RabbitMQ、MySql、ScoreMarker经常被Kill，而且无法启动，查看日志会发现提示内存不够。</p>
+</blockquote>
+
+<p>查看下日志，如果是内存不够的原因，那就赶紧加内存吧。为了保证系统正常运行，内存不能低于2G。</p>
+</li>
+</ol>
+<h2><a class="anchor" id="5-bug更新日志" href="http://git.oschina.net/ocelot/ExamStack#5-bug更新日志"></a>5 bug更新日志</h2>
+<ol class="task-list">
+<li>2016-2-15 解决试题导入报错的bug</li>
+<li>2016-3-15 解决考试用户列表不能正常分页的bug</li>
+</ol>
+</div>
+</div>
+</div>
+<script>
+  if($('.markdown-body').children("style").length != 0){
+    var i, array = $('.markdown-body').children("style");
+    array.first().attr('scoped','');
+    $.scoped();
+  }
+</script>
+
+<h3 id="project_comm_title">
+项目点评 (8 条)
+</h3>
+<div id="git-issue-comments">
+<div class="column" style="margin: 0.5rem 0 0.5rem 0">
+<div class="ui comments middle aligned" id="notes-list">
+<div class="comment note" data-discussion="discussion-comment-674580-" data-note-id="330887" id="note_330887">
+<a href="http://git.oschina.net/gchxcn" class="avatar_o" name="gchxcn" style="margin-top:0px;" username="gchxcn"><img alt="2e4f032529d58987c4a94a5b797c76d6?s=40&amp;d=mm" class="ui avatar image" src="./ocelot_ExamStack - 码云 - 开源中国_files/2e4f032529d58987c4a94a5b797c76d6" style="width:35px;height:35px;">
+</a><div class="content arrow_box" style="margin-left:50px;">
+<div class="actions float-right" style="height: 0.2rem; display: none;">
+<a href="http://git.oschina.net/ocelot/ExamStack#note_330887" class="reply" name="note_330887"><i class="icon linkify"></i>
+链接
+</a><a href="http://git.oschina.net/ocelot/ExamStack#only_comment" class="reply js-note-reply" name="gchxcn" username="gchxcn"><i class="icon reply"></i>
+回复
+</a></div>
+<div class="title">
+<a href="http://git.oschina.net/gchxcn" class="author">gchxcn</a>
+<span class="timeago" title="2016-05-20 01:53">13天前</span>
+</div>
+<div class="text note-content markdown-body" type="note" typeid="330887" username="gchxcn">
+<p>Common.jar需要放在什么地方，是干什么的？不能提交试卷，Scoremarker老是崩溃</p>
+</div>
+</div>
+</div>
+<style>
+  .edit_note.common-note-form{
+    margin: 0.5rem 0 0.5rem 0
+  }
+  
+  .ui.comments .content .title {
+    padding: 6px 12px;
+    background-color: #f7f7f7;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #fbfbfb;
+  }
+  #git-issue-comments .avatar{
+    border-radius:2rem !important;
+  }
+</style>
+<script>
+  isLoading = false;
+  $(".edit_note_330887").on('click',function(event){
+    if (isLoading==false){
+      isLoading = true;
+    }else{
+      return false;
+    };
+  });
+  $(".actions").not('#modal-act').hide();
+  $(".title").hover(function(){
+     $(this).prev().show();
+  }, function(){
+      $(".actions").not('#modal-act').hide();
+  })
+  $(".actions").not('#modal-act').hover(function(){
+     $(this).show();
+   }, function(){
+     $(this).hide();
+   })
+</script>
+
+<div class="comment note" data-discussion="discussion-comment-674580-" data-note-id="278967" id="note_278967">
+<a href="http://git.oschina.net/uiice" class="avatar_o" name="uiice" style="margin-top:0px;" username="uiice"><img alt="28bcb402cc4a59eb2a8d75356ad8e4b6?s=40&amp;d=mm" class="ui avatar image" src="./ocelot_ExamStack - 码云 - 开源中国_files/28bcb402cc4a59eb2a8d75356ad8e4b6" style="width:35px;height:35px;">
+</a><div class="content arrow_box" style="margin-left:50px;">
+<div class="actions float-right" style="height: 0.2rem; display: none;">
+<a href="http://git.oschina.net/ocelot/ExamStack#note_278967" class="reply" name="note_278967"><i class="icon linkify"></i>
+链接
+</a><a href="http://git.oschina.net/ocelot/ExamStack#only_comment" class="reply js-note-reply" name="uiice" username="uiice"><i class="icon reply"></i>
+回复
+</a></div>
+<div class="title">
+<a href="http://git.oschina.net/uiice" class="author">uiice</a>
+<span class="timeago" title="2016-03-07 03:53">3月前</span>
+</div>
+<div class="text note-content markdown-body" type="note" typeid="278967" username="uiice">
+<p>Common.jar需要放在什么地方，另外，为什么培训删除没有反应？谢谢</p>
+</div>
+</div>
+</div>
+<style>
+  .edit_note.common-note-form{
+    margin: 0.5rem 0 0.5rem 0
+  }
+  
+  .ui.comments .content .title {
+    padding: 6px 12px;
+    background-color: #f7f7f7;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #fbfbfb;
+  }
+  #git-issue-comments .avatar{
+    border-radius:2rem !important;
+  }
+</style>
+<script>
+  isLoading = false;
+  $(".edit_note_278967").on('click',function(event){
+    if (isLoading==false){
+      isLoading = true;
+    }else{
+      return false;
+    };
+  });
+  $(".actions").not('#modal-act').hide();
+  $(".title").hover(function(){
+     $(this).prev().show();
+  }, function(){
+      $(".actions").not('#modal-act').hide();
+  })
+  $(".actions").not('#modal-act').hover(function(){
+     $(this).show();
+   }, function(){
+     $(this).hide();
+   })
+</script>
+
+<div class="comment note" data-discussion="discussion-comment-674580-" data-note-id="260357" id="note_260357">
+<a href="http://git.oschina.net/laowang2012" class="avatar_o" name="老王2012" style="margin-top:0px;" username="laowang2012"><img alt="7d098946940427f94044549a19dc281b?s=40&amp;d=mm" class="ui avatar image" src="./ocelot_ExamStack - 码云 - 开源中国_files/7d098946940427f94044549a19dc281b" style="width:35px;height:35px;">
+</a><div class="content arrow_box" style="margin-left:50px;">
+<div class="actions float-right" style="height: 0.2rem; display: none;">
+<a href="http://git.oschina.net/ocelot/ExamStack#note_260357" class="reply" name="note_260357"><i class="icon linkify"></i>
+链接
+</a><a href="http://git.oschina.net/ocelot/ExamStack#only_comment" class="reply js-note-reply" name="老王2012" username="laowang2012"><i class="icon reply"></i>
+回复
+</a></div>
+<div class="title">
+<a href="http://git.oschina.net/laowang2012" class="author">老王2012</a>
+<span class="timeago" title="2016-01-25 10:22">4月前</span>
+</div>
+<div class="text note-content markdown-body" type="note" typeid="260357" username="laowang2012">
+<p>建议：一感觉不需要消息队列，把部署整复杂了，考生每做一题存一次该题答案，第二建议把答题卡放在页面左侧，题号后显示考生答案，考生可以对拿不准的题号做标记</p>
+</div>
+</div>
+</div>
+<style>
+  .edit_note.common-note-form{
+    margin: 0.5rem 0 0.5rem 0
+  }
+  
+  .ui.comments .content .title {
+    padding: 6px 12px;
+    background-color: #f7f7f7;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #fbfbfb;
+  }
+  #git-issue-comments .avatar{
+    border-radius:2rem !important;
+  }
+</style>
+<script>
+  isLoading = false;
+  $(".edit_note_260357").on('click',function(event){
+    if (isLoading==false){
+      isLoading = true;
+    }else{
+      return false;
+    };
+  });
+  $(".actions").not('#modal-act').hide();
+  $(".title").hover(function(){
+     $(this).prev().show();
+  }, function(){
+      $(".actions").not('#modal-act').hide();
+  })
+  $(".actions").not('#modal-act').hover(function(){
+     $(this).show();
+   }, function(){
+     $(this).hide();
+   })
+</script>
+
+<div class="comment note" data-discussion="discussion-comment-674580-" data-note-id="250191" id="note_250191">
+<a href="http://git.oschina.net/lqxion" class="avatar_o" name="艾辛" style="margin-top:0px;" username="lqxion"><img alt="134679_lqxion" class="ui avatar image" src="./ocelot_ExamStack - 码云 - 开源中国_files/134679_lqxion.jpg" style="width:35px;height:35px;">
+</a><div class="content arrow_box" style="margin-left:50px;">
+<div class="actions float-right" style="height: 0.2rem; display: none;">
+<a href="http://git.oschina.net/ocelot/ExamStack#note_250191" class="reply" name="note_250191"><i class="icon linkify"></i>
+链接
+</a><a href="http://git.oschina.net/ocelot/ExamStack#only_comment" class="reply js-note-reply" name="艾辛" username="lqxion"><i class="icon reply"></i>
+回复
+</a></div>
+<div class="title">
+<a href="http://git.oschina.net/lqxion" class="author">艾辛</a>
+<span class="timeago" title="2016-01-08 11:11">5月前</span>
+</div>
+<div class="text note-content markdown-body" type="note" typeid="250191" username="lqxion">
+<p>今日官网访问失败？  </p>
+</div>
+</div>
+</div>
+<style>
+  .edit_note.common-note-form{
+    margin: 0.5rem 0 0.5rem 0
+  }
+  
+  .ui.comments .content .title {
+    padding: 6px 12px;
+    background-color: #f7f7f7;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #fbfbfb;
+  }
+  #git-issue-comments .avatar{
+    border-radius:2rem !important;
+  }
+</style>
+<script>
+  isLoading = false;
+  $(".edit_note_250191").on('click',function(event){
+    if (isLoading==false){
+      isLoading = true;
+    }else{
+      return false;
+    };
+  });
+  $(".actions").not('#modal-act').hide();
+  $(".title").hover(function(){
+     $(this).prev().show();
+  }, function(){
+      $(".actions").not('#modal-act').hide();
+  })
+  $(".actions").not('#modal-act').hover(function(){
+     $(this).show();
+   }, function(){
+     $(this).hide();
+   })
+</script>
+
+<div class="comment note" data-discussion="discussion-comment-674580-" data-note-id="237955" id="note_237955">
+<a href="http://git.oschina.net/liulaohan" class="avatar_o" name="刘老憨" style="margin-top:0px;" username="liulaohan"><img alt="E39d357037fb59bb60be1b35c5267fc1?s=40&amp;d=mm" class="ui avatar image" src="./ocelot_ExamStack - 码云 - 开源中国_files/e39d357037fb59bb60be1b35c5267fc1(1)" style="width:35px;height:35px;">
+</a><div class="content arrow_box" style="margin-left:50px;">
+<div class="actions float-right" style="height: 0.2rem; display: none;">
+<a href="http://git.oschina.net/ocelot/ExamStack#note_237955" class="reply" name="note_237955"><i class="icon linkify"></i>
+链接
+</a><a href="http://git.oschina.net/ocelot/ExamStack#only_comment" class="reply js-note-reply" name="刘老憨" username="liulaohan"><i class="icon reply"></i>
+回复
+</a></div>
+<div class="title">
+<a href="http://git.oschina.net/liulaohan" class="author">刘老憨</a>
+<span class="timeago" title="2015-12-19 23:08">5月前</span>
+</div>
+<div class="text note-content markdown-body" type="note" typeid="237955" username="liulaohan">
+<p><a href="http://git.oschina.net/eoolife" class="gfm gfm-team_member ">@eoolife </a>这个是windowes下生成服务的工具，linux下是不需要的。具体可以进讨论组或者去官网下载编译好的应用查看对应应用的结构。</p>
+</div>
+</div>
+</div>
+<style>
+  .edit_note.common-note-form{
+    margin: 0.5rem 0 0.5rem 0
+  }
+  
+  .ui.comments .content .title {
+    padding: 6px 12px;
+    background-color: #f7f7f7;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #fbfbfb;
+  }
+  #git-issue-comments .avatar{
+    border-radius:2rem !important;
+  }
+</style>
+<script>
+  isLoading = false;
+  $(".edit_note_237955").on('click',function(event){
+    if (isLoading==false){
+      isLoading = true;
+    }else{
+      return false;
+    };
+  });
+  $(".actions").not('#modal-act').hide();
+  $(".title").hover(function(){
+     $(this).prev().show();
+  }, function(){
+      $(".actions").not('#modal-act').hide();
+  })
+  $(".actions").not('#modal-act').hover(function(){
+     $(this).show();
+   }, function(){
+     $(this).hide();
+   })
+</script>
+
+<div class="comment note" data-discussion="discussion-comment-674580-" data-note-id="237607" id="note_237607">
+<a href="http://git.oschina.net/eoolife" class="avatar_o" name="eoolife" style="margin-top:0px;" username="eoolife"><img alt="58717_eoolife" class="ui avatar image" src="./ocelot_ExamStack - 码云 - 开源中国_files/58717_eoolife.jpg" style="width:35px;height:35px;">
+</a><div class="content arrow_box" style="margin-left:50px;">
+<div class="actions float-right" style="height: 0.2rem; display: none;">
+<a href="http://git.oschina.net/ocelot/ExamStack#note_237607" class="reply" name="note_237607"><i class="icon linkify"></i>
+链接
+</a><a href="http://git.oschina.net/ocelot/ExamStack#only_comment" class="reply js-note-reply" name="eoolife" username="eoolife"><i class="icon reply"></i>
+回复
+</a></div>
+<div class="title">
+<a href="http://git.oschina.net/eoolife" class="author">eoolife</a>
+<span class="timeago" title="2015-12-18 22:12">6月前</span>
+</div>
+<div class="text note-content markdown-body" type="note" typeid="237607" username="eoolife">
+<p>您好，prunsrv.exe 这个文件如果在linux环境部署是不是不用启动呢？谢谢</p>
+</div>
+</div>
+</div>
+<style>
+  .edit_note.common-note-form{
+    margin: 0.5rem 0 0.5rem 0
+  }
+  
+  .ui.comments .content .title {
+    padding: 6px 12px;
+    background-color: #f7f7f7;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #fbfbfb;
+  }
+  #git-issue-comments .avatar{
+    border-radius:2rem !important;
+  }
+</style>
+<script>
+  isLoading = false;
+  $(".edit_note_237607").on('click',function(event){
+    if (isLoading==false){
+      isLoading = true;
+    }else{
+      return false;
+    };
+  });
+  $(".actions").not('#modal-act').hide();
+  $(".title").hover(function(){
+     $(this).prev().show();
+  }, function(){
+      $(".actions").not('#modal-act').hide();
+  })
+  $(".actions").not('#modal-act').hover(function(){
+     $(this).show();
+   }, function(){
+     $(this).hide();
+   })
+</script>
+
+<div class="comment note" data-discussion="discussion-comment-674580-" data-note-id="236826" id="note_236826">
+<a href="http://git.oschina.net/liulaohan" class="avatar_o" name="刘老憨" style="margin-top:0px;" username="liulaohan"><img alt="E39d357037fb59bb60be1b35c5267fc1?s=40&amp;d=mm" class="ui avatar image" src="./ocelot_ExamStack - 码云 - 开源中国_files/e39d357037fb59bb60be1b35c5267fc1(1)" style="width:35px;height:35px;">
+</a><div class="content arrow_box" style="margin-left:50px;">
+<div class="actions float-right" style="height: 0.2rem; display: none;">
+<a href="http://git.oschina.net/ocelot/ExamStack#note_236826" class="reply" name="note_236826"><i class="icon linkify"></i>
+链接
+</a><a href="http://git.oschina.net/ocelot/ExamStack#only_comment" class="reply js-note-reply" name="刘老憨" username="liulaohan"><i class="icon reply"></i>
+回复
+</a></div>
+<div class="title">
+<a href="http://git.oschina.net/liulaohan" class="author">刘老憨</a>
+<span class="timeago" title="2015-12-18 08:12">6月前</span>
+</div>
+<div class="text note-content markdown-body" type="note" typeid="236826" username="liulaohan">
+<p><a href="http://git.oschina.net/fantsyforever" class="gfm gfm-team_member ">@唯美 </a>到www.examstack.com下载吧，这个过两天就更新上去</p>
+</div>
+</div>
+</div>
+<style>
+  .edit_note.common-note-form{
+    margin: 0.5rem 0 0.5rem 0
+  }
+  
+  .ui.comments .content .title {
+    padding: 6px 12px;
+    background-color: #f7f7f7;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #fbfbfb;
+  }
+  #git-issue-comments .avatar{
+    border-radius:2rem !important;
+  }
+</style>
+<script>
+  isLoading = false;
+  $(".edit_note_236826").on('click',function(event){
+    if (isLoading==false){
+      isLoading = true;
+    }else{
+      return false;
+    };
+  });
+  $(".actions").not('#modal-act').hide();
+  $(".title").hover(function(){
+     $(this).prev().show();
+  }, function(){
+      $(".actions").not('#modal-act').hide();
+  })
+  $(".actions").not('#modal-act').hover(function(){
+     $(this).show();
+   }, function(){
+     $(this).hide();
+   })
+</script>
+
+<div class="comment note" data-discussion="discussion-comment-674580-" data-note-id="236789" id="note_236789">
+<a href="http://git.oschina.net/fantsyforever" class="avatar_o" name="唯美" style="margin-top:0px;" username="fantsyforever"><img alt="88699_fantsyforever" class="ui avatar image" src="./ocelot_ExamStack - 码云 - 开源中国_files/88699_fantsyforever.jpg" style="width:35px;height:35px;">
+</a><div class="content arrow_box" style="margin-left:50px;">
+<div class="actions float-right" style="height: 0.2rem; display: none;">
+<a href="http://git.oschina.net/ocelot/ExamStack#note_236789" class="reply" name="note_236789"><i class="icon linkify"></i>
+链接
+</a><a href="http://git.oschina.net/ocelot/ExamStack#only_comment" class="reply js-note-reply" name="唯美" username="fantsyforever"><i class="icon reply"></i>
+回复
+</a></div>
+<div class="title">
+<a href="http://git.oschina.net/fantsyforever" class="author">唯美</a>
+<span class="timeago" title="2015-12-18 00:44">6月前</span>
+</div>
+<div class="text note-content markdown-body" type="note" typeid="236789" username="fantsyforever">
+<p>表结构不全，有些表缺字段</p>
+</div>
+</div>
+</div>
+<style>
+  .edit_note.common-note-form{
+    margin: 0.5rem 0 0.5rem 0
+  }
+  
+  .ui.comments .content .title {
+    padding: 6px 12px;
+    background-color: #f7f7f7;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #fbfbfb;
+  }
+  #git-issue-comments .avatar{
+    border-radius:2rem !important;
+  }
+</style>
+<script>
+  isLoading = false;
+  $(".edit_note_236789").on('click',function(event){
+    if (isLoading==false){
+      isLoading = true;
+    }else{
+      return false;
+    };
+  });
+  $(".actions").not('#modal-act').hide();
+  $(".title").hover(function(){
+     $(this).prev().show();
+  }, function(){
+      $(".actions").not('#modal-act').hide();
+  })
+  $(".actions").not('#modal-act').hover(function(){
+     $(this).show();
+   }, function(){
+     $(this).hide();
+   })
+</script>
+
+</div>
+</div>
+</div>
+<script>
+  var page = 1;
+  $(function(){
+    Notes.init()
+    $('.comment-events').click(function(){
+      $('.comment-events').hide();
+      $('.comment-load').removeClass('hide');
+      var last_id = $('.comment.note').last().data('note-id');
+      $.ajax({
+        url:"http://git.oschina.net/ocelot/ExamStack/comment_list",
+        data: {'last_id':last_id},
+        type: 'GET',
+        success: function(data) {
+          $('.comment-load').addClass('hide');
+          $('.comment-events').show();
+          if (data.status == 0){
+            $('.comment-events').text("无更多评论");
+            $('.comment-events').attr('disabled','disabled');
+            $('.comment-events').addClass('disabled');
+          }else{
+            $('.comment.note').last().append('<h4 class="ui horizontal divider header" style="color:currentColor;width:50%;margin-left:auto;margin-right:auto;"><i class="tag icon"></i>'+page+'</h4>');
+            $('.comment.note').last().append(data.data);
+            $('.timeago').timeago();
+            page++;
+            if(data.c_length < 10){
+              $('.comment-events').text("无更多评论");
+              $('.comment-events').attr('disabled','disabled');
+              $('.comment-events').addClass('disabled');
+            }
+          }
+        }
+      });
+    });
+  })
+</script>
+<style>
+  #git-issue-comments{
+    color:#999;
+    padding:0px;
+    margin-top:24px;
+  }
+  #project_comm_title{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E0E0E0;
+  }
+</style>
+
+<div class="sixteen wide column" style="padding:0;margin-bottom: 10px;">
+<img alt="9b8a917f06a0585ce5aaee723b4674b4?s=40&amp;d=mm" class="ui avatar image" src="./ocelot_ExamStack - 码云 - 开源中国_files/9b8a917f06a0585ce5aaee723b4674b4" style="width:35px;height:35px;">
+<div class="ui form" style="display:inline">
+<textarea class="md-input" id="editor_comment" onkeyup="autogrow(this);" style="color:#000;width:80%;max-width:80%;height:36px;min-height:36px;resize:auto;margin-left:8px;overflow:hidden;padding:6px 6px 6px 9px;" placeholder="在此输入你对项目想说的话..."></textarea>
+</div>
+<button class="ui blue button js-comment-button disabled" id="only_comment" name="button" style="float:right;margin:0;width:12%;" type="submit" disabled="disabled">评论</button>
+</div>
+<script>
+  $("#editor_comment").attr('placeholder',"在此输入你对项目想说的话...");
+  
+  function autogrow(textarea){
+    var adjustedHeight=textarea.clientHeight;
+    adjustedHeight=Math.max(textarea.scrollHeight,adjustedHeight);
+    if (adjustedHeight>textarea.clientHeight){
+      textarea.style.height=adjustedHeight+'px';
+    }
+  }
+  
+  function insertText(obj,str) {
+    if (document.selection) {
+        var sel = document.selection.createRange();
+        sel.text = str;
+    } else if (typeof obj.selectionStart === 'number' && typeof obj.selectionEnd === 'number') {
+        var startPos = obj.selectionStart,
+            endPos = obj.selectionEnd,
+            cursorPos = startPos,
+            tmpStr = obj.value;
+        obj.value = tmpStr.substring(0, startPos) + str + tmpStr.substring(endPos, tmpStr.length);
+        cursorPos += str.length;
+        obj.selectionStart = obj.selectionEnd = cursorPos;
+    } else {
+        obj.value += str;
+    }
+  }
+  
+  $(function(){
+    $("#only_comment").attr("disabled","disabled");
+    $("#only_comment").addClass("disabled","disabled");
+    $("#editor_comment").on("keyup", function(){
+      var commit_button = $("#only_comment")
+      if($.trim($(this).val()).length == 0){
+        commit_button.attr('disabled','disabled').addClass('disabled');
+      }else{
+        commit_button.removeAttr('disabled').removeClass('disabled');
+      }
+    });
+  
+    $("#editor_comment").on("keydown",function(e){
+      if( (e.ctrlKey && e.keyCode == 13) || (e.metaKey && e.keyCode == 13) ){
+        $("#only_comment").trigger('click');
+        return false;
+      }else if(e.keyCode == 13){
+        insertText(document.getElementById("editor_comment"),"  ");
+      }
+    });
+  
+    $('#only_comment').click(function(e){
+        $('.comment_send_loading').show();
+        $("#editor_comment").attr("disabled","disabled");
+        $(this).attr("disabled","disabled").addClass("disabled");
+        var csrfToken = $('meta[name="csrf-token"]').attr('content');
+        var content = $("#editor_comment").val();
+        $.ajax({
+          type: "POST",
+          url: "http://git.oschina.net/ocelot/ExamStack/comment",
+          data: {authenticity_token:csrfToken,content:content},
+          dataType: "script"
+        }).done(function(e){
+          var count = $.trim($('#home-comment > span').text());
+          count = parseInt(count) + 1;
+          $('#home-comment > span').text(count);
+          txt = $('#project_comm_title').text().replace(/\d+/g,count);
+          $('#project_comm_title').text(txt);
+        }).always(function(){
+          $('.comment_send_loading').hide();
+          $("#editor_comment").removeAttr("disabled").val("");
+          var comment = $('.comment.note')[0];
+          if(comment){
+            var offsetTop = $(comment).offset().top-80;
+            $('body,html').animate({scrollTop:offsetTop},600);
+            $(comment).hide().delay(10).fadeIn(1400);
+          }
+        });
+    });
+  });
+</script>
+
+<div class="pop" data-content="给项目拥有者发送私信" id="project-user-message">
+<i class="mail icon"></i>
+</div>
+<div class="ui modal message-input">
+<i class="close icon"></i>
+<div class="header">给用户发送私信</div>
+<div class="content">
+<textarea class="message-content" maxlength="250" placeholder="请在这里输入私信内容" style="padding:1em;width:100%;resize:none;"></textarea>
+</div>
+<div class="actions" id="modal-act">
+<div class="ui black button">
+取消
+</div>
+<div class="ui positive right labeled icon button" id="send-message">
+发送
+<i class="checkmark icon"></i>
+</div>
+</div>
+</div>
+<style>
+  body.dimmable{
+    position: inherit !important;
+  }
+</style>
+<script>
+  (function() {
+    var sendMessage;
+  
+    $('.pop').popup({
+      position: 'bottom left'
+    });
+  
+    $('#project-user-message').on('click', function() {
+      $('.message-content').val('');
+      return $('.message-input').modal({
+        onApprove: function() {
+          return sendMessage("");
+        }
+      }).modal('show');
+    });
+  
+    $('body').delegate('.set-msg-content', 'click', function() {
+      return $('.message-content').val('想请您喝杯咖啡，请您开启项目捐赠功能吧。');
+    });
+  
+    $('.message-content').on('keydown', function(e) {
+      if ((e.ctrlKey && e.keyCode === 13) || (e.metaKey && e.keyCode === 13)) {
+        $('#send-message').trigger('click');
+        return false;
+      }
+    });
+  
+    sendMessage = function(e) {
+      var content, username;
+  
+      content = $('.message-content').val();
+      if ($.trim(content).length === 0) {
+        alert("请输入私信内容");
+        return false;
+      } else {
+        username = gon.user_project.split('/')[0];
+        return $.ajax({
+          url: "/" + username + "/message",
+          beforeSend: function(xhr) {
+            xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+          },
+          type: 'POST',
+          data: {
+            content: content
+          },
+          success: function(data) {
+            if (data.status === 0) {
+              return alert("可能由于发送过于频繁,留言发送失败,请稍后再试");
+            } else {
+              $('#project-ok-msg').fadeIn();
+              return setTimeout(function() {
+                return $('#project-ok-msg').fadeOut('2500');
+              }, 1500);
+            }
+          },
+          error: function() {
+            return alert("可能由于网络原因,留言发送失败,请稍后再试");
+          }
+        });
+      }
+    };
+  
+  }).call(this);
+</script>
+
+<script>
+  function containSpecial(s){
+    var containSpecial = RegExp(/[(\%)]+/);
+    return (containSpecial.test(s));
+  }
+  
+  $(function(){
+    if("true" == "false" || "false" == "false" ){return null;}
+    var editing = false
+    window.alreadyContext = false
+  
+    $('html').on('click',function(event){
+      if(alreadyContext){
+        $('.tree-context').remove();
+        alreadyContext=false;
+        event.preventDefault();
+      }
+    })
+  
+    $('.tree-item').on('click',function(event){
+      if(alreadyContext){
+        event.preventDefault();
+      }
+    })
+  
+    function rename(file_hex){
+      $(".row.tree-item").show();
+      $(".tree-item-rename").hide();
+  
+      if($("."+file_hex).is(':hidden') == true) return;
+  
+      $("."+file_hex).hide();
+      var _t = $(".rename-"+file_hex);
+      src = _t.attr('src_text')
+      if(src==undefined){
+         newName = _t.find("[name='new_filename']").val()
+        _t.attr('src_text',newName)
+      }else{
+        _t.find("[name='new_filename']").val(_t.attr('src_text'))
+      }
+      $(".rename-"+file_hex).css("display","");
+    }
+  
+  
+    setTimeout(function(){
+      $(".popup-save").click(function(){
+        form = $(this).parents(".ui.form")
+        file_hex = $(this).parents(".row.tree-item").attr("file_hex");
+        new_filename = $.trim(form.find("[name='new_filename']").val())
+        if(containSpecial(new_filename)) {
+          alert("文件名包含特殊字符！");
+          return;
+        }
+        overwrite = false
+        $('.tree-item-file-name').find('a').each(function(a){
+          title = $(this).attr('title');
+          if(title != undefined){
+            if (title.split('/')[0].toLowerCase() == new_filename.toLowerCase()){
+              overwrite = true;
+            }
+          }
+        });
+        if(overwrite){
+          form.find("[name='new_filename']").focus();
+          alert("存在相同的文件名,请修改后重试")
+          return;
+        }
+        $.ajax({
+          type: 'POST',
+          url: "/ocelot/ExamStack/rename/"+form.attr("path"),
+          data:
+          {
+            new_filename: $.trim(form.find("[name='new_filename']").val())
+          },
+          success: function(o){
+            if(o.status == 1){
+              href = window.location.href.split('?')[0]
+              window.location.href = href;
+            }else {
+              alert("重命名失败！");
+            }
+          },
+          dataType: "json"
+        });
+      })
+  
+      $(".popup-close").click(function(){
+        $(".row.tree-item").show();
+        $(".tree-item-rename").hide();
+      })
+      $('.tree-item-file-name').each(function(){
+        var _this = $(this)
+        if(_this.parent().attr('file_hex')!=undefined){
+          _this.contextmenu(function(event){
+            if(alreadyContext==false){
+              content = "<div class='ui menu compact vertical mini tree-context' style='position:absolute;border:1px solid #aaa;width:180px !important;z-index:99;display:block;'><div class='item tree-operation' id='btn-rename' style='background-color:#fff;z-index:99;cursor:pointer;'><i class='edit icon'></i>重命名</div><div class='item tree-operation' style='background-color:#fff;z-index:99;cursor:pointer;' id='btn-delete'><i class='trash icon'></i>删除</div></div>"
+              c = $(content);
+              c.css('left',event.pageX+'px').css('top',event.pageY+'px')
+              $('body').append(c)
+              $('#btn-rename').on('click',function(event){
+                rename(_this.parent().attr('file_hex'));
+                event.preventDefault();
+              })
+              $('#btn-delete').on('click',function(event){
+                var path = _this.parent().next().next().find('.ui.form').attr('path')
+                var r=confirm("确定要删除吗？")
+                if(r){
+                  $.ajax({
+                    type: 'GET',
+                    url: "/ocelot/ExamStack/delete/"+path,
+                    success: function(o){
+                      if(o.status == 1){
+                        if($('.tree-item-file-name').length == 2){
+                          window.location.href = '/'+gon.user_project;
+                        }else{
+                          href = window.location.href.split('?')[0]
+                          window.location.href = href;
+                        }
+                      }else{
+                        alert("删除失败！");
+                      }
+                    }
+                  });
+                }
+                event.preventDefault();
+              })
+              alreadyContext = true
+            }else{
+              $('.tree-context').remove();
+              alreadyContext=false;
+            }
+          event.preventDefault();
+        })
+      }})
+    },1000)
+  })
+</script>
+
+</div>
+<div class="pop" data-content="评论" id="home-comment">
+<i class="comment icon" style="margin-left:-12px;"></i>
+<span style="display:block;font-size:12px;margin-left:-3px;">
+8
+</span>
+</div>
+<script>
+  $(function(){
+    $('.pop').popup({position : 'bottom right'});
+  
+    if($("#project-user-message").length == 0){
+        $('#home-comment').css('bottom','115px');
+    }
+    $("#home-comment").click(function(e) {
+      if($('#project_comm_title').length == 0){
+        window.location.href="/"+gon.user_project+"#project_comm_title";
+        return;
+      }
+      var comment = $('.comment.note')[0];
+      if(comment!=undefined){
+        var offsetTop = $(comment).offset().top-60;
+        $('body,html').animate({scrollTop:offsetTop},400);
+      }else{
+        var offsetTop = $('#editor_comment').offset().top+30;
+        $('body,html').animate({scrollTop:offsetTop},400);
+        $('#editor_comment').focus();
+      }
+    });
+  });
+</script>
+
+<script>
+  (function() {
+    $(function() {
+      return Tree.init();
+    });
+  
+  }).call(this);
+</script>
+</div><div class="ui popup"><div class="content">给项目拥有者发送私信</div></div>
+
+<script>
+  Tree.initHighlightTheme('white')
+</script>
+<div id="gotop" style="display: block;"></div>
+<style>
+  #gotop{
+  display: none;
+    width: 30px;
+    height: 32px;
+    position: fixed;
+    right: 50px;
+    cursor: pointer;
+    bottom: 165px;
+    border-radius: 10px;
+    opacity: 3;
+    background: url("/cd-top-arrow.svg") no-repeat 50% 50%;
+    background-color: #bab3b2;
+  }
+</style>
+<script>
+  function goTop(){
+    $(window).scroll(function(e) {
+      if($(this).scrollTop()>50)
+        $("#gotop").fadeIn(1000);
+      else
+        $("#gotop").fadeOut(1000);
+    });
+  };
+  $(function(){
+    $("#gotop").click(function(e) {
+      $('body,html').animate({scrollTop:0},500);
+    });
+    goTop();
+  });
+</script>
+
+<footer id="git-footer-main">
+<div class="ui grid page">
+<div class="ten wide column alias" style="padding-left:0;">
+<a href="http://www.oschina.net/">© OSChina.NET</a>
+<a href="http://git.oschina.net/terms">使用条款</a>
+<a href="http://git.oschina.net/piracy">隐私</a>
+<a href="http://git.oschina.net/ocelot/ExamStack#" class="pop_email" onclick="return false;" title="Email: git#oschina.cn">联系我们
+</a><a href="http://git.oschina.net/appclient" target="_blank">APP下载
+</a><a>QQ交流群: 515965326</a>
+<a href="javascript:void(0)" onclick="force_mobile()" style="float: right">切换至手机版</a>
+</div>
+<div class="three wide column item" style="text-align:left;">
+<a href="http://git.oschina.net/language/zh-CN">简 体
+</a><span style="color:#CECECE">
+/
+</span>
+<a href="http://git.oschina.net/language/zh-TW">繁 體
+</a><span style="color:#CECECE">
+/
+</span>
+<a href="http://git.oschina.net/language/en">English
+</a></div>
+<div class="three wide column" style="text-align:right;margin-top:-6px;padding-right:0;float:right;">
+本站带宽由
+<a href="http://www.51idc.com/" target="_blank"><img alt="51idc" src="./ocelot_ExamStack - 码云 - 开源中国_files/51idc.png" style="width: 75px; height: 20px">
+</a>提供
+</div>
+</div>
+</footer>
+<style>
+  .alias a{margin-left:3px;}
+  #git-footer-main .column, #git-footer-main a{font-size:13px !important;}
+</style>
+<script>
+  $('.pop_email').popup({});
+  function force_mobile() {
+    current_url = window.location.href;
+    force_mobile_url = current_url.substr(0,current_url.indexOf('?'))+'?force_mobile=true';
+    location.href=force_mobile_url;
+  }
+</script><div class="ui popup"><div class="content">Email: git#oschina.cn</div></div>
+
+
+
+<div class="ui popup"><div class="content">点击复制</div></div><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important;"></textarea><div id="atwho-container"><div id="atwho-ground-editor_comment"><div id="at-view-58" class="atwho-view"><ul id="at-view-58-ul" class="atwho-view-url"></ul></div><div id="at-view-64" class="atwho-view"><ul id="at-view-64-ul" class="atwho-view-url"></ul></div><div id="issues" class="atwho-view"><ul id="issues-ul" class="atwho-view-url"></ul></div><div id="pull_requests" class="atwho-view"><ul id="pull_requests-ul" class="atwho-view-url"></ul></div><div id="codes" class="atwho-view"><ul id="codes-ul" class="atwho-view-url"></ul></div><div id="at-view-58" class="atwho-view"><ul id="at-view-58-ul" class="atwho-view-url"></ul></div><div id="at-view-64" class="atwho-view"><ul id="at-view-64-ul" class="atwho-view-url"></ul></div><div id="issues" class="atwho-view"><ul id="issues-ul" class="atwho-view-url"></ul></div><div id="pull_requests" class="atwho-view"><ul id="pull_requests-ul" class="atwho-view-url"></ul></div><div id="codes" class="atwho-view"><ul id="codes-ul" class="atwho-view-url"></ul></div></div></div><div class="ui popup"><div class="content">给项目拥有者发送私信</div></div><div class="ui popup"><div class="content">评论</div></div></body></html>

@@ -1,0 +1,8 @@
+[2016-06-02 14:17:43] [error] [ 3632] 指定的服务已存在。
+[2016-06-02 14:17:43] [error] [ 3632] Failed installing 'ScoreMarkerService' service
+[2016-06-02 14:17:43] [error] [ 3632] 指定的服务已存在。
+[2016-06-02 14:17:43] [error] [ 3632] Commons Daemon procrun failed with exit value: 8 (Failed to install service)
+[2016-06-02 14:17:43] [error] [ 3632] 指定的服务已存在。
+[2016-06-02 14:20:30] [error] [ 4528] FindClass com/examstack/scoremarker/ScoreMarkerWin failed
+[2016-06-02 14:20:31] [error] [ 4400] Failed to start Java
+[2016-06-02 14:20:31] [error] [ 4400] ServiceStart returned 4

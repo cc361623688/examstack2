@@ -1,0 +1,4 @@
+2016-06-02 14:23:07,856 INFO  org.springframework.context.support.AbstractApplicationContext:510  -> Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@14899482: startup date [Thu Jun 02 14:23:07 CST 2016]; root of context hierarchy
+2016-06-02 14:23:08,152 INFO  org.springframework.core.io.support.PropertiesLoaderSupport:172  -> Loading properties file from file [C:\server\apache-tomcat-Exam\Exam\scoreMarker\config\scoremaker.properties]
+2016-06-02 14:23:09,137 INFO  com.examstack.scoremarker.ScoreMarkerWin:43  -> ScoreMarker daemon init done.
+2016-06-02 14:23:09,168 INFO  com.examstack.scoremarker.ScoreMarkerWin:81  -> scoreMaker checking next delivery from message queue

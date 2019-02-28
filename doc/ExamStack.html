@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://examstack.com/resources.html#document -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		
+		
+		<title>ExamStack</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="keywords" content="">
+		<!--<link rel="shortcut icon" href="./resources/images/favicon.ico" />-->
+		<link href="./ExamStack_files/bootstrap-huan.css" rel="stylesheet">
+		<link href="./ExamStack_files/font-awesome.min.css" rel="stylesheet">
+		<link href="./ExamStack_files/style.css" rel="stylesheet">
+		<link href="./ExamStack_files/slider.css" rel="stylesheet">
+		<style>
+			.question-number {
+				color: #5cb85c;
+				font-weight: bolder;
+				display: inline-block;
+				width: 30px;
+				text-align: center;
+			}
+
+			.question-number-2 {
+				color: #5bc0de;
+				font-weight: bolder;
+				display: inline-block;
+				width: 30px;
+				text-align: center;
+			}
+			.question-number-3 {
+				color: #d9534f;
+				font-weight: bolder;
+				display: inline-block;
+				width: 30px;
+				text-align: center;
+			}
+
+			a.join-practice-btn {
+				margin: 0;
+				margin-left: 20px;
+			}
+
+			.content ul.question-list-knowledge {
+				padding: 8px 20px;
+			}
+
+			.knowledge-title {
+				background-color: #EEE;
+				padding: 2px 10px;
+				margin-bottom: 20px;
+				cursor: pointer;
+				border: 1px solid #FFF;
+				border-radius: 4px;
+			}
+
+			.knowledge-title-name {
+				margin-left: 8px;
+			}
+
+			.point-name {
+				width: 200px;
+				display: inline-block;
+			}
+		</style>
+
+	</head>
+
+	<body style="zoom: 1;">
+		<!-- Navigation bar starts -->
+
+		<div class="navbar bs-docs-nav" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="http://examstack.com/index.html" class="navbar-brand"></a>
+				</div>
+				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+					<ul class="nav navbar-nav">
+
+						<li>
+							<a href="http://examstack.com/faq.html">FAQ</a>
+						</li>
+						<li>
+							<a href="http://examstack.com/releasenote.html">更新历史</a>
+						</li>
+						<li>
+							<a href="http://examstack.com/download.html">软件下载</a>
+						</li>
+						<li>
+							<a href="http://examstack.com/demo.html">演示系统</a>
+						</li>
+
+						<li>
+							<a href="http://examstack.com/resources.html#document">使用文档</a>
+						</li>
+
+						<li>
+							<a href="http://examstack.com/contact.html">联系我们</a>
+						</li>
+
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Navigation bar ends -->
+
+		<!-- Slider starts -->
+
+		<div class="container">
+			<ol class="breadcrumb">
+				<li>
+					<a href="http://examstack.com/index.html">网站首页</a>
+				</li>
+				<li class="active">
+					使用文档
+				</li>
+			</ol>
+		</div>
+		<div class="content" style="border-bottom:1px solid #C7C7C7;">
+
+			<div class="container">
+				<div>
+					<div class="row">
+
+						<div class="col-md-9 page-content" style="min-height: 600px;">
+							
+							
+							
+							<h4 id="document-g">1 概述</h4>
+							<h3>1.1 简介</h3>
+							<p>
+								在<code>ExamStack</code>考试系统第一版的基础上，我们进行了大量代码重构，同时也对数据模型做了部分调整。为了减小学员考试交卷时大量并发带来的系统风险，我们尝试采用成熟的消息队列框架RabbitMQ来解决这一问题，因此我们的数据库以及系统的架构同第一版相比，发生了不小的变化。
+							</p>
+							<h3>1.2 部署要点</h3>
+							<p>
+								</p><li><code>Management.war</code>和<code>Portal.war</code>需要部署在<code>同一个目录</code>下。</li>
+								<li>Examstack增加了<code>培训功能</code>，因为需要保存培训材料，所以请留出足够的磁盘空间（以实际需要为准）。</li>
+								<li>要保证RabbitMQ服务状态为<code>运行状态</code>。</li>
+								<li>要保证ScoreMarker状态为<code>运行状态</code>，同时ScoreMarker调用服务地址要配置正确。</li>
+							<p></p>
+							<h4 id="document-y">2 应用服务器安装配置</h4>
+							<h3>2.1 服务器安装部署</h3>
+							<h2>2.1.1 服务器配置</h2>
+							<p>
+								</p><li>操作系统：Linux、Windows</li>
+								<li>内存：最低2G，推荐8G</li>
+							<p></p>
+							<h2>2.1.2 java运行环境</h2>
+							<p>
+								</p><li>java 8</li>
+							<p></p>
+							<h2>2.1.3 服务器</h2>
+							<p>
+								</p><li>Tomcat 8</li>
+								<li>RabbitMQ</li>
+								<li>MySql 5.0以上</li>
+							<p></p>
+							<h3>2.2 应用部署</h3>
+							<h2>2.2.1 数据库</h2>
+							<p>
+								</p><li>在MySql中新建一个数据库<code>examstack</code>，字符集使用<code>utf8 -- UTF-8 Unicode</code></li>
+								<li>使用我们提供的<code>examstack.sql</code>还原<code>examstack</code></li>
+								<li>设置好对应的访问权限</li>
+							<p></p>
+							<h2>2.2.2 RabbitMQ</h2>
+							<p>
+								</p><li>安装最新版本的RabbitMQ，具体安装方法，在网络上可以找到很多。
+									
+								</li>
+								<li>配置</li>
+								
+							<p></p>
+							<h2>2.2.3 应用</h2>
+							<p>
+								</p><li>将<code>Management.war</code>和<code>Portal.war</code>放到Tomcat应用程序目录（<code>webapps</code>）下。</li>
+								<li>启动Tomcat，webapps目录下会生成两个文件夹（<code>Management</code>和<code>Portal</code>）。</li>
+								<li>分别进入到<code>Management/WEB-INF/Spring</code>和<code>Portal/WEB-INF/Spring</code>下修改<code>root-context.xml</code>文件,将数据库地址、用户名和密码修改成正确的内容。修改完成后重启tomcat服务器。</li>
+								需要修改的内容如下:
+								<pre><code data-origin="&lt;pre&gt;&lt;code&gt; &amp;lt;property name=&quot;jdbcUrl&quot; value=&quot;jdbc:mysql:/*.*.*.*:3306/examstack?useUnicode=true&amp;amp;amp;characterEncoding=UTF-8&quot; /&amp;gt;
+ &amp;lt;property name=&quot;user&quot; value=&quot;root&quot; /&amp;gt;
+ &amp;lt;property name=&quot;password&quot; value=&quot;***&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;"> &lt;property name="jdbcUrl" value="jdbc:mysql:/*.*.*.*:3306/examstack?useUnicode=true&amp;amp;characterEncoding=UTF-8" /&gt;
+ &lt;property name="user" value="root" /&gt;
+ &lt;property name="password" value="***" /&gt;
+</code></pre>
+								<li>访问<code>http://localhost:8080/Management</code>和<code>http://localhost:8080/Portal</code>可以进入到管理后台页面和学员页面，并可以正常登陆，则应用配置成功。</li>
+								<code>注意：在完成这一步后学员考试交卷无法完成,需要部署ScoreMarker。</code>
+								<li>部署ScoreMarker</li>
+								Linux
+<pre><code>解压scoreMarker到/opt/目录。
+确认config/scoremarker.properties文件配置正确。
+拷贝scoremarker 执行脚本到init.d目录下并检查脚本中的配置。</code></pre>
+    							Windows
+<pre><code>解压scoreMarker到任意目录。
+确认config/scoremarker.properties文件配置正确。
+修改installService.bat中APP_HOME为scoreMarker目录。
+运行installService.bat后启动服务ScoreMarkerService服务。</code></pre>
+感谢<code>梦醉生</code>将自己安装RabbitMQ的经验贡献出来：
+    							<pre>  
+1、下载esl-erlang软件，地址是：https://www.erlang-solutions.com/resources/download.html
+   双击安装erlang；配置环境变量ERLANG_HOME=E:\jsp\erlang\erl7.2，并在系统变量path中添加E:\jsp\erlang\erl7.2\bin;（此值根据安装路径写）。在命令提示符下输入”erl”可得如下结果:
+      C:\Users\adapp&gt;erl
+        Eshell V18.2.3 (abort with ^G) 说明安装成功
+2、下载RabbitMQ并安装。下载地址是：http://www.rabbitmq.com/download.html
+    配置环境变量RABBITMQ_SERVER=E:\jsp\RabbitMQ Server\rabbitmq_server-3.6.0（此值根据安装路径写）
+    找到环境变量中的path变量:
+       双击path，在其后面增加：E:\jsp\RabbitMQ Server\rabbitmq_server-3.6.0\sbin （此值根据安装路径写），然后确定即可
+   打开CMD，在DOS下，进入E:\jsp\RabbitMQ Server\rabbitmq_server-3.6.0\sbin，运行rabbitmq-service，按提示输入rabbitmq-service Install后回车，把RabbitMQ安装成服务即可。
+ 在控制面板中，打开服务管理窗口，把RabbitMQ服务和ScoreMarkerService服务启动即可。
+ </pre>
+							<p></p>
+						</div>
+						<div class="col-md-3">
+							<div class="bs-docs-sidebar affix-top">
+								<ul class="nav bs-docs-sidenav">
+									<li>
+										<a href="http://examstack.com/resources.html#system-g">概述</a>
+									</li>
+									<li>
+										<a href="http://examstack.com/resources.html#system-h">应用服务器安装配置</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="copy">
+							<p>
+								ExamStack Copyright © <a href="http://www.examstack.com/" target="_blank">examstack</a> - <a href="http://examstack.com/" target="_blank">主页</a> | <a href="http://www.examstack.com/aboutus.html" target="_blank">关于examstack</a> | <a href="http://www.examstack.com/faq.html" target="_blank">FAQ</a> | <a href="http://www.examstack.com/contact.html" target="_blank">联系我们</a> | 蜀ICP备15000494号
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Slider Ends -->
+
+		<!-- Javascript files -->
+		<!-- jQuery -->
+		<script type="text/javascript" src="./ExamStack_files/jquery-1.9.0.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script type="text/javascript" src="./ExamStack_files/bootstrap.min.js"></script>
+	
+
+</body></html>
